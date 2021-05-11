@@ -1,0 +1,3156 @@
+<body style="background: #eae9ec;">
+ <div id="notification_overlay" style="position:fixed; top:0; bottom:0; left:0; right:0; background-color:#222; opacity:0.95; z-index:100001; display: none;">
+ </div>
+ <div id="popup_overlay" style="position:fixed; top:0; bottom:0; left:0; right:0; background-color:#222; opacity:0.20; z-index:100001; display: none;">
+ </div>
+ <div id="modal_overlay" style="position:fixed; top:0; bottom:0; left:0; right:0; background-color:#222; opacity:0.95; z-index:100001; display: none;">
+ </div>
+ <div data-type="popup" id="dm-lightbox" style="position:fixed; top:0; bottom:0; left:0; right:0; background-color:#222; opacity:0.95; z-index:100001; display: none;">
+ </div>
+ <div id="country-code" style="display: none;">
+ </div>
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-55884-5', 'auto', {'name' : 'socialblade'});
+  ga('socialblade.send', 'pageview');
+ </script>
+ <div id="top-header-wrap">
+  <div id="top-header">
+   <li class="dash-bar-menu">
+    <a href="/forgotpw">
+     Forgot Password?
+    </a>
+   </li>
+   <li class="dash-bar-menu">
+    <a href="/login">
+     Login
+    </a>
+   </li>
+   <li class="dash-bar-menu">
+    <a href="/register">
+     Register
+    </a>
+   </li>
+   <li class="dash-bar-menu">
+    <a href="//support.socialblade.com" rel="nofollow" target="_blank">
+     <i class="fa fa-ticket">
+     </i>
+     Contact
+    </a>
+   </li>
+   <li class="dash-bar-menu">
+    <a href="/youtube/help" target="_blank">
+     <i class="fa fa-question-circle">
+     </i>
+     FAQ
+    </a>
+   </li>
+   <li class="dash-bar-menu">
+    <a href="https://socialblade.com/discord/">
+     Community Discord
+    </a>
+   </li>
+   <li class="dash-bar-menu" style="padding-right: 10px; ">
+    <a href="/business-api" style="color:#b6dff5; font-weight: bold;">
+     <i class="fa fa-code" style="color:#b6dff5; margin-top: -1px;">
+     </i>
+     Business API
+    </a>
+   </li>
+  </div>
+ </div>
+ <div style="width: 100%; height: 64px; background: #2f2c2c;">
+  <div id="main-menu-container" style="width: 1260px; height: 60px; margin: 0px auto; color:#fff; background: #2f2c2c;">
+   <div style="width: 233px; height: 60px; margin: 0px; float: left; background: #2f2c2c; ">
+    <a href="/">
+     <img src="/images/header-logo.png?version=4" style="margin: 0px;"/>
+    </a>
+   </div>
+   <div style="width: 1027px; height: 60px; margin: 0px; float: left; background: #2f2c2c;">
+    <form action="/youtube/s/" id="topSearchForm" method="get">
+     <div style="width: 340px; height: 32px; line-height: 32px; margin-top: 3px; margin-right: 2px; float: right;  background: #2f2c2c;">
+      <input autofocus="autofocus" id="SearchInput" name="q" placeholder="Enter YouTube Username"/>
+      <button class="search-button" type="submit" value="Search">
+       <i class="fa fa-search" style="font-size: 1.1em;">
+       </i>
+      </button>
+     </div>
+     <div style="width: 170px; height: 40px; line-height: 40px; margin-top: 8px; float: right;">
+      <div class="dd-container" id="search-special" style="width: 150px;">
+       <div class="dd-select" style="width: 150px; background: rgb(68, 68, 68);">
+        <input class="dd-selected-value" type="hidden" value="youtube"/>
+        <a class="dd-selected">
+         <img class="dd-selected-image" src="/images/media/icons/fav-youtube.png"/>
+         <label class="dd-selected-text">
+          YouTube
+         </label>
+        </a>
+        <span class="dd-pointer dd-pointer-down">
+        </span>
+       </div>
+       <ul class="dd-options dd-click-off-close" style="width: 158px;">
+        <li>
+         <a class="dd-option dd-option-selected">
+          <input class="dd-option-value" type="hidden" value="youtube"/>
+          <img class="dd-option-image" src="/images/media/icons/fav-youtube.png"/>
+          <label class="dd-option-text">
+           YouTube
+          </label>
+         </a>
+        </li>
+        <li>
+         <a class="dd-option">
+          <input class="dd-option-value" type="hidden" value="twitch"/>
+          <img class="dd-option-image" src="/images/media/icons/fav-twitch.png"/>
+          <label class="dd-option-text">
+           Twitch
+          </label>
+         </a>
+        </li>
+        <li>
+         <a class="dd-option">
+          <input class="dd-option-value" type="hidden" value="facebook"/>
+          <img class="dd-option-image" src="/images/media/icons/fav-facebook.png"/>
+          <label class="dd-option-text">
+           Facebook
+          </label>
+         </a>
+        </li>
+        <li>
+         <a class="dd-option">
+          <input class="dd-option-value" type="hidden" value="instagram"/>
+          <img class="dd-option-image" src="/images/media/icons/fav-instagram.png"/>
+          <label class="dd-option-text">
+           Instagram
+          </label>
+         </a>
+        </li>
+        <li>
+         <a class="dd-option">
+          <input class="dd-option-value" type="hidden" value="twitter"/>
+          <img class="dd-option-image" src="/images/media/icons/fav-twitter.png"/>
+          <label class="dd-option-text">
+           Twitter
+          </label>
+         </a>
+        </li>
+        <li>
+         <a class="dd-option">
+          <input class="dd-option-value" type="hidden" value="tiktok"/>
+          <img class="dd-option-image" src="/images/media/icons/fav-tiktok.png?v=2"/>
+          <label class="dd-option-text">
+           TikTok
+          </label>
+         </a>
+        </li>
+        <li>
+         <a class="dd-option">
+          <input class="dd-option-value" type="hidden" value="trovo"/>
+          <img class="dd-option-image" src="/images/media/icons/fav-trovo.png"/>
+          <label class="dd-option-text">
+           Trovo
+          </label>
+         </a>
+        </li>
+        <li>
+         <a class="dd-option">
+          <input class="dd-option-value" type="hidden" value="dailymotion"/>
+          <img class="dd-option-image" src="/images/media/icons/fav-dailymotion.png"/>
+          <label class="dd-option-text">
+           Dailymotion
+          </label>
+         </a>
+        </li>
+        <li>
+         <a class="dd-option">
+          <input class="dd-option-value" type="hidden" value="mixer"/>
+          <img class="dd-option-image" src="/images/media/icons/fav-mixer.png"/>
+          <label class="dd-option-text">
+           Mixer
+          </label>
+         </a>
+        </li>
+        <li>
+         <a class="dd-option">
+          <input class="dd-option-value" type="hidden" value="dlive"/>
+          <img class="dd-option-image" src="/images/media/icons/fav-dlive.png"/>
+          <label class="dd-option-text">
+           DLive
+          </label>
+         </a>
+        </li>
+        <li>
+         <a class="dd-option">
+          <input class="dd-option-value" type="hidden" value="storyfire"/>
+          <img class="dd-option-image" src="/images/media/icons/fav-storyfire.png"/>
+          <label class="dd-option-text">
+           StoryFire
+          </label>
+         </a>
+        </li>
+       </ul>
+      </div>
+     </div>
+    </form>
+   </div>
+  </div>
+ </div>
+ <div id="top-menu-wrap">
+  <div id="top-menu-inner-wrap">
+   <div id="top-menu">
+    <div class="top-menu-list">
+     <a href="/" style="width: 25px; text-align: center;">
+      <i class="fa fa-home" style="color:#fff;">
+      </i>
+     </a>
+    </div>
+    <div class="top-menu-list">
+     <a href="//shop.spreadshirt.com/SOCIALBLADE/" rel="nofollow" style="width:25px; text-align: center;" target="_blank">
+      <i class="fa fa-shopping-cart" style="color:#fff; padding-right: 5px;">
+      </i>
+     </a>
+    </div>
+    <div class="top-menu-list top-menu-category-toplists">
+     <span id="top-menu-platform-select" style="cursor: pointer; height: 35px; line-height: 35px; display: block; z-index: 10;">
+      Supported Platforms
+      <span class="menu-cat">
+       ▼
+      </span>
+     </span>
+     <div id="top-menu-top-platform">
+      <div id="top-menu-top-charts-inner" style="text-transform: initial;">
+       <div style="width: 1050px; float: left;">
+        <div id="top-menu-content-charts" style="width: 1150px; margin: 0px auto; display: block;">
+         <div style="float: left; height: 30px; line-height: 30px; padding: 0px 4px; display: block; margin-right: 12px;">
+          <a href="/youtube">
+           <img src="/images/media/icons/fav-youtube.png" style="height: 18px; width: 18px; margin-right: 4px; margin-bottom: -5px;"/>
+           YouTube
+          </a>
+         </div>
+         <div style="float: left; height: 30px; line-height: 30px; padding: 0px 4px; display: block; margin-right: 12px;">
+          <a href="/twitch">
+           <img src="/images/media/icons/fav-twitch.png" style="height: 18px; width: 18px; margin-right: 4px; margin-bottom: -5px;"/>
+           Twitch
+          </a>
+         </div>
+         <div style="float: left; height: 30px; line-height: 30px; padding: 0px 4px; display: block; margin-right: 12px;">
+          <a href="/twitter">
+           <img src="/images/media/icons/fav-twitter.png" style="height: 18px; width: 18px; margin-right: 4px; margin-bottom: -5px;"/>
+           Twitter
+          </a>
+         </div>
+         <div style="float: left; height: 30px; line-height: 30px; padding: 0px 4px; display: block; margin-right: 12px;">
+          <a href="/instagram">
+           <img src="/images/media/icons/fav-instagram.png" style="height: 18px; width: 18px; margin-right: 4px; margin-bottom: -5px;"/>
+           Instagram
+          </a>
+         </div>
+         <div style="float: left; height: 30px; line-height: 30px; padding: 0px 4px; display: block; margin-right: 12px;">
+          <a href="/facebook">
+           <img src="/images/media/icons/fav-facebook.png" style="height: 18px; width: 18px; margin-right: 4px; margin-bottom: -5px;"/>
+           Facebook
+          </a>
+         </div>
+         <div style="float: left; height: 30px; line-height: 30px; padding: 0px 4px; display: block; margin-right: 12px;">
+          <a href="/tiktok">
+           <img src="/images/media/icons/fav-tiktok.png?v=2" style="height: 18px; width: 18px; margin-right: 4px; margin-bottom: -5px;"/>
+           TikTok
+          </a>
+         </div>
+         <div style="float: left; height: 30px; line-height: 30px; padding: 0px 4px; display: block; margin-right: 12px;">
+          <a href="/trovo">
+           <img src="/images/media/icons/fav-trovo.png" style="height: 18px; width: 18px; margin-right: 4px; margin-bottom: -5px;"/>
+           Trovo
+          </a>
+         </div>
+         <div style="float: left; height: 30px; line-height: 30px; padding: 0px 4px; display: block; margin-right: 12px;">
+          <a href="/storyfire">
+           <img src="/images/media/icons/fav-storyfire.png" style="height: 18px; width: 18px; margin-right: 4px; margin-bottom: -5px;"/>
+           StoryFire
+          </a>
+         </div>
+         <div style="float: left; height: 30px; line-height: 30px; padding: 0px 4px; display: block; margin-right: 12px;">
+          <a href="/mixer">
+           <img src="/images/media/icons/fav-mixer.png" style="height: 18px; width: 18px; margin-right: 4px; margin-bottom: -5px;"/>
+           Mixer
+          </a>
+         </div>
+         <div style="float: left; height: 30px; line-height: 30px; padding: 0px 4px; display: block; margin-right: 12px;">
+          <a href="/dlive">
+           <img src="/images/media/icons/fav-dlive.png" style="height: 18px; width: 18px; margin-right: 4px; margin-bottom: -5px;"/>
+           DLive
+          </a>
+         </div>
+         <div style="float: left; height: 30px; line-height: 30px; padding: 0px 4px; display: block; margin-right: 12px;">
+          <a href="/dailymotion">
+           <img src="/images/media/icons/fav-dailymotion.png" style="height: 18px; width: 18px; margin-right: 4px; margin-bottom: -5px;"/>
+           Dailymotion
+          </a>
+         </div>
+         <div style="clear: both;">
+         </div>
+        </div>
+       </div>
+       <div style="clear: both;">
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="top-menu-list top-menu-category-toplists">
+     <span id="top-menu-category-select" style="cursor: pointer; height: 35px; line-height: 35px; display: block; z-index: 10;">
+      Top Lists
+      <span class="menu-cat">
+       ▼
+      </span>
+     </span>
+     <div id="top-menu-top-charts">
+      <div id="top-menu-top-charts-inner" style="text-transform: initial;">
+       <div id="top-menu-left-categories" style="float: left; width: 220px; margin-right: 30px;">
+        <div class="top-menu-category-button" data-rolechange="youtube" style="width: 90px; cursor:pointer; background: #444; padding: 0px 5px; float: left; margin: 1px; text-align: center; border-bottom: 1px solid #555;">
+         YouTube
+        </div>
+        <div class="top-menu-category-button" data-rolechange="twitch" style="width: 90px; cursor:pointer; background: #444; padding: 0px 5px; float: left; margin: 1px; text-align: center; border-bottom: 1px solid #555;">
+         Twitch
+        </div>
+        <div class="top-menu-category-button" data-rolechange="instagram" style="width: 90px; cursor:pointer; background: #444; padding: 0px 5px; float: left; margin: 1px; text-align: center; border-bottom: 1px solid #555;">
+         Instagram
+        </div>
+        <div class="top-menu-category-button" data-rolechange="twitter" style="width: 90px; cursor:pointer; background: #444; padding: 0px 5px; float: left; margin: 1px; text-align: center; border-bottom: 1px solid #555;">
+         Twitter
+        </div>
+        <div class="top-menu-category-button" data-rolechange="facebook" style="width: 90px; cursor:pointer; background: #444; padding: 0px 5px; float: left; margin: 1px; text-align: center; border-bottom: 1px solid #555;">
+         Facebook
+        </div>
+        <div class="top-menu-category-button" data-rolechange="tiktok" style="width: 90px; cursor:pointer; background: #444; padding: 0px 5px; float: left; margin: 1px; text-align: center; border-bottom: 1px solid #555;">
+         TikTok
+        </div>
+        <div class="top-menu-category-button" data-rolechange="dlive" style="width: 90px; cursor:pointer; background: #444; padding: 0px 5px; float: left; margin: 1px; text-align: center; border-bottom: 1px solid #555;">
+         DLive
+        </div>
+        <div class="top-menu-category-button" data-rolechange="dailymotion" style="width: 90px; cursor:pointer; background: #444; padding: 0px 5px; float: left; margin: 1px; text-align: center; border-bottom: 1px solid #555;">
+         Dailymotion
+        </div>
+        <!--<div class = "top-menu-category-button" data-rolechange = "storyfire" style = "width: 90px; cursor:pointer; background: #444; padding: 0px 5px; float: left; margin: 1px; text-align: center; border-bottom: 1px solid #555;">StoryFire</div>-->
+       </div>
+       <div id="top-menu-left-categories" style="width: 950px; float: left;">
+        <div class="top-menu-content" id="top-menu-content-youtube" style="width: 950px; float: left; display: block;">
+         <div style="width: 225px; float: left;">
+          <h2 class="top-menu-top-charts-header">
+           YouTube Top Charts
+          </h2>
+          <!--<div class = "top-menu-top-charts-content"><a href = "/youtube/top/networks/mostviewed">Top 250 YouTube Networks</a></div>-->
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/50">
+            Top 50 YouTubers
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/100">
+            Top 100 YouTube Channels
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/500">
+            Top 500 YouTube Channels
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content" style="margin-top: 8px;">
+           <a href="/youtube/top/trending/top-500-channels-30-days/most-subscribed">
+            Top 500 YouTubers (30 Days)
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/trending/top-500-channels-1-day/most-subscribed">
+            Top 500 YouTubers (1 Day)
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/trending/bottom-500-channels-30-days/most-unsubscribed">
+            Worst 500 YouTubers (30 Days)
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/trending/bottom-500-channels-1-day/most-unsubscribed">
+            Worst 500 YouTubers (1 Day)
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content" style="margin-top: 16px;">
+           <a href="/youtube/top/category/made-for-kids">
+            Top "Made for Kids" YouTube Creators
+           </a>
+          </div>
+         </div>
+         <div style="width: 240px; float: left; margin-left: 30px;">
+          <h2 class="top-menu-top-charts-header">
+           YouTube Popular Countries
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/country/US">
+            Top 250 from United States
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/country/GB">
+            Top 250 from United Kingdom
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/country/AU">
+            Top 250 from Australia
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/country/CA">
+            Top 250 from Canada
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/country/DE">
+            Top 250 from Germany
+           </a>
+          </div>
+         </div>
+         <div style="width: 200px; float: left; margin-left: 20px;">
+          <h2 class="top-menu-top-charts-header">
+           YouTube Top Categories
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/autos">
+            Autos &amp; Vehicles
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/comedy">
+            Comedy
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/education">
+            Education
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/entertainment">
+            Entertainment
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/film">
+            Film
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/games">
+            Gaming
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/tech">
+            Science &amp; Technology
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/shows">
+            Shows
+           </a>
+          </div>
+         </div>
+         <div style="width: 200px; float: left;">
+          <br/>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/howto">
+            How to &amp; Style
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/music">
+            Music
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/news">
+            News &amp; Politics
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/nonprofit">
+            Nonprofit &amp; Activism
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/people">
+            People &amp; Blogs
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/animals">
+            Pets &amp; Animals
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/sports">
+            Sports
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/youtube/top/category/travel">
+            Travel
+           </a>
+          </div>
+         </div>
+        </div>
+        <div class="top-menu-content" id="top-menu-content-twitch" style="width: 900px; float: left; display: none;">
+         <div style="width: 240px; float: left;">
+          <h2 class="top-menu-top-charts-header" style="color:#bf26ff;">
+           Twitch Top Charts
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitch/top/10/followers">
+            Top 10 Followed Twitch Streamers
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitch/top/10/channelviews">
+            Top 10 Viewed Twitch Streamers
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitch/top/50/followers">
+            Top 50 Followed Twitch Streamers
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitch/top/50/channelviews">
+            Top 50 Viewed Twitch Streamers
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content" style="margin-top: 8px;">
+           <a href="/twitch/top/100">
+            Top 100 Followed Twitch Users
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitch/top/100/channelviews">
+            Top 100 Viewed Twitch Users
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitch/top/500">
+            Top 500 Followed Streamers
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitch/top/500/channelviews">
+            Top 500 Viewed Streamers
+           </a>
+          </div>
+         </div>
+        </div>
+        <div class="top-menu-content" id="top-menu-content-instagram" style="width: 900px; float: left; display: none;">
+         <div style="width: 250px; float: left;">
+          <h2 class="top-menu-top-charts-header" style="color:#2687ff;">
+           Instagram Top Charts
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/instagram/top/50/followers">
+            Top 50 Followed Instagram Users
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/instagram/top/50/following">
+            Top 50 Following Instagram Users
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/instagram/top/50/media">
+            Top 50 Instagram Users by Uploads
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/instagram/top/100/followers">
+            Top 100 Followed Instagram Users
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/instagram/top/100/following">
+            Top 100 Following Instagram Users
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/instagram/top/100/media">
+            Top 100 Instagram Users by Uploads
+           </a>
+          </div>
+         </div>
+        </div>
+        <div class="top-menu-content" id="top-menu-content-facebook" style="width: 900px; float: left; display: none;">
+         <div style="width: 250px; float: left;">
+          <h2 class="top-menu-top-charts-header" style="color:#2687ff;">
+           Facebook Top Charts - Likes
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/facebook/top/50/likes">
+            Top 50 Liked Facebook Pages
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/facebook/top/100/likes">
+            Top 100 Liked Facebook Pages
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/facebook/top/500/likes">
+            Top 500 Liked Facebook Pages
+           </a>
+          </div>
+         </div>
+         <div style="width: 300px; float: left;">
+          <h2 class="top-menu-top-charts-header" style="color:#2687ff;">
+           Facebook Top Charts - Talked About
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/facebook/top/50/talking-about">
+            Top 50 Talked About Facebook Pages
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/facebook/top/100/talking-about">
+            Top 100 Talked About Facebook Pages
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/facebook/top/500/talking-about">
+            Top 500 Talked About Facebook Pages
+           </a>
+          </div>
+         </div>
+        </div>
+        <div class="top-menu-content" id="top-menu-content-dlive" style="width: 900px; float: left; display: none;">
+         <div style="width: 200px; float: left;">
+          <h2 class="top-menu-top-charts-header" style="color:#ffcc00;">
+           DLive - Top Followers
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/dlive/top/50/most-followers">
+            Top 50 Followed DLive Creators
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dlive/top/100/most-followers">
+            Top 100 Followed DLive Creators
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dlive/top/500/most-followers">
+            Top 500 Followed DLive Creators
+           </a>
+          </div>
+         </div>
+         <div style="width: 200px; float: left; margin-left: 20px;">
+          <h2 class="top-menu-top-charts-header" style="color:#ffcc00;">
+           Dlive - Top Following
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/dlive/top/50/most-follows">
+            Top 50 Following DLive Creators
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dlive/top/100/most-follows">
+            Top 100 Following DLive Creators
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dlive/top/500/most-follows">
+            Top 500 Following DLive Creators
+           </a>
+          </div>
+         </div>
+         <div style="width: 200px; float: left; margin-left: 20px;">
+          <h2 class="top-menu-top-charts-header" style="color:#ffcc00;">
+           Dlive - Most Uploads
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/dlive/top/50/most-uploads">
+            Top 50 Most Uploads
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dlive/top/100/most-uploads">
+            Top 100 Most Uploads
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dlive/top/500/most-uploads">
+            Top 500 Most Uploads
+           </a>
+          </div>
+         </div>
+         <div style="width: 200px; float: left; margin-left: 20px;">
+          <h2 class="top-menu-top-charts-header" style="color:#ffcc00;">
+           Dlive - Highest Lino Points
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/dlive/top/50/highest-earnings">
+            Top 50 Highest Earning
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dlive/top/100/highest-earnings">
+            Top 100 Highest Earning
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dlive/top/500/highest-earnings">
+            Top 500 Highest Earning
+           </a>
+          </div>
+         </div>
+        </div>
+        <div class="top-menu-content" id="top-menu-content-twitter" style="width: 900px; float: left; display: none;">
+         <div style="width: 250px; float: left;">
+          <h2 class="top-menu-top-charts-header" style="color:#139ed1;">
+           Twitter Top Charts
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitter/top/10">
+            Top 10 Followed Twitter Users
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitter/top/10/most-tweets">
+            Top 10 Twitter Users by Tweets
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitter/top/10/engagements">
+            Top 10 Twitter Users by Engagements
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitter/top/50">
+            Top 50 Followed Twitter Users
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitter/top/50/most-tweets">
+            Top 50 Twitter Users by Tweets
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitter/top/50/engagements">
+            Top 50 Twitter Users by Engagements
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitter/top/100">
+            Top 100 Followed Twitter Users
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitter/top/100/most-tweets">
+            Top 100 Twitter Users by Tweets
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/twitter/top/100/engagements">
+            Top 100 Twitter Users by Engagements
+           </a>
+          </div>
+         </div>
+        </div>
+        <div class="top-menu-content" id="top-menu-content-dailymotion" style="width: 900px; float: left; display: none;">
+         <div style="width: 200px; float: left;">
+          <h2 class="top-menu-top-charts-header" style="color:#1565C0;">
+           Dailymotion Top Charts
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/50/mostfollowers">
+            Top 50 Followed Dailymotion Users
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/50/mostviewed">
+            Top 50 Dailymotion Users by Views
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/100/mostfollowers">
+            Top 100 Followed Dailymotion Users
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/100/mostviewed">
+            Top 100 Dailymotion Users by Views
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/500/mostfollowers">
+            Top 500 Followed Dailymotion Users
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/500/mostviewed">
+            Top 500 Dailymotion Users by Views
+           </a>
+          </div>
+         </div>
+         <div style="width: 240px; float: left; margin-left: 30px;">
+          <h2 class="top-menu-top-charts-header" style="color:#1565C0;">
+           Dailymotion Popular Countries
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/country/us">
+            Top 250 from United States
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/country/gb">
+            Top 250 from United Kingdom
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/country/au">
+            Top 250 from Australia
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/country/ca">
+            Top 250 from Canada
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/country/de">
+            Top 250 from Germany
+           </a>
+          </div>
+         </div>
+         <div style="width: 200px; float: left; margin-left: 20px;">
+          <h2 class="top-menu-top-charts-header" style="color:#1565C0;">
+           Dailymotion Categories
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/animals">
+            Pets &amp; Animals
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/autos">
+            Autos &amp; Vehicles
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/creation">
+            Creative
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/fun">
+            Fun
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/videogames">
+            Games
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/kids">
+            Kids
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/lifestyle">
+            Lifestyle &amp; Entertainment
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/music">
+            Music
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/news">
+            News &amp; Politics
+           </a>
+          </div>
+         </div>
+         <div style="width: 200px; float: left;">
+          <br/>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/people">
+            People &amp; Blogs
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/school">
+            School &amp; Education
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/sexy">
+            Sexy &amp; Mature
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/sports">
+            Sports
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/tech">
+            Technology
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/travel">
+            Travel
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/tv">
+            Television &amp; Shows
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/dailymotion/top/category/webcam">
+            Webcam &amp; Vlogs
+           </a>
+          </div>
+         </div>
+        </div>
+        <div class="top-menu-content" id="top-menu-content-tiktok" style="width: 900px; float: left; display: none;">
+         <div style="width: 250px; float: left;">
+          <h2 class="top-menu-top-charts-header" style="color:#4FC3F7;">
+           TikTok Top Charts
+          </h2>
+          <div class="top-menu-top-charts-content">
+           <a href="/tiktok/top/50/most-followers">
+            Top 50 Most Followed TikTok Creators
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/tiktok/top/50/most-following">
+            Top 50 TikTok Creators by Most Following
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/tiktok/top/50/most-likes">
+            Top 50 TikTok Creators by Most Likes
+           </a>
+          </div>
+          <div class="top-menu-top-charts-content">
+           <a href="/tiktok/top/50/most-uploads">
+            Top 50 TikTok Creators by Most Uploads
+           </a>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div style="clear: both;">
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="top-menu-list top-menu-category-toplists">
+     <span id="top-menu-realtime-select" style="cursor: pointer; height: 35px; line-height: 35px; display: block; z-index: 10;">
+      Live Counts / Realtime
+      <span class="menu-cat">
+       ▼
+      </span>
+     </span>
+     <div id="top-menu-top-realtime">
+      <div id="top-menu-top-realtime-inner" style="text-transform: initial;">
+       <div style="width: 1220px; float: left;">
+        <div id="top-menu-content-realtime" style="width: 1220px; float: left; display: block; font-size: 0.9em;">
+         <div style="width: 170px; float: left;">
+          <h2 class="top-menu-top-realtime-header">
+           YouTube Realtime
+          </h2>
+          <a href="/youtube/realtime">
+           YouTube Live Sub Count
+          </a>
+         </div>
+         <div style="width: 170px; float: left; margin-left: 20px;">
+          <h2 class="top-menu-top-realtime-header">
+           Twitch Realtime
+          </h2>
+          <a href="/twitch/realtime">
+           Twitch Live Follower Count
+          </a>
+         </div>
+         <div style="width: 180px; float: left;">
+          <h2 class="top-menu-top-realtime-header">
+           Twitter Realtime
+          </h2>
+          <a href="/twitter/realtime">
+           Twitter Live Follower Count
+          </a>
+         </div>
+         <div style="width: 205px; float: left;">
+          <h2 class="top-menu-top-realtime-header">
+           Dailymotion Realtime
+          </h2>
+          <a href="/dailymotion/realtime">
+           Dailymotion Live Follower Count
+          </a>
+         </div>
+         <div style="width: 175px; float: left;">
+          <h2 class="top-menu-top-realtime-header">
+           Mixer Realtime
+          </h2>
+          <a href="/mixer/realtime">
+           Mixer Live Follower Count
+          </a>
+         </div>
+         <div style="width: 170px; float: left;">
+          <h2 class="top-menu-top-realtime-header">
+           StoryFire Realtime
+          </h2>
+          <a href="/storyfire/realtime">
+           StoryFire Live Sub Count
+          </a>
+         </div>
+        </div>
+       </div>
+       <div style="clear: both;">
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="top-menu-list">
+     <a href="/grow-and-brand-your-youtube-channel">
+      Consulting
+     </a>
+    </div>
+    <div class="top-menu-list">
+     <a href="/compare">
+      Compare
+     </a>
+    </div>
+    <div class="top-menu-list">
+     <a href="https://socialblade.com/blog/">
+      Blog
+     </a>
+    </div>
+   </div>
+   <div id="top-menu-social">
+    <div class="top-menu-partner" style="width: 260px; background: #d63e33; text-align: center;">
+     <a href="/products/subscription" style="font-weight: bold; color:#fff; text-decoration: none;">
+      <i -1px;"="" class="fa fa-star" margin-top:="">
+      </i>
+      Premium Membership
+     </a>
+    </div>
+   </div>
+  </div>
+  <div style="clear: both;">
+  </div>
+ </div>
+ <div id="lngtd-top-sticky" style="z-index: 50; background-color: white; max-width: 1258px; min-height: 90px; display: block; position: static; margin: 20px auto 0px; opacity: 1; padding: 5px 0px;">
+  <div id="cdm-zone-06" style="text-align: center; margin: 20px auto;">
+  </div>
+ </div>
+ <div style="clear: both;">
+ </div>
+ <br/>
+ <div id="YouTubeUserTopHeader" style="height: 120px;">
+  <div id="YouTubeUserTopHeaderBackground" style="background-image: url(''); background-size:100%; height: 210px; width: 1280px;">
+   <div style="float: right; margin-top: 10px; margin-right: 10px;">
+    <a class="core-button core-margin core-small-wide ui-black" href="/youtube/compare/UCoJMeovRt5ctq_iFKDAyrSQ" style="float: right;">
+     Compare
+    </a>
+    <!--<a style = "float: right;" class = "core-button core-margin core-small-wide ui-green" href = "//socialblade.com/finance">YouTube Business & Tax Services</a>-->
+   </div>
+  </div>
+  <div id="YouTubeUserTopSocial" style="margin-top: 90px;">
+   <div style="float: right;">
+    <a class="core-button -margin core-small-wide ui-black" href="https://youtube.com/channel/UCoJMeovRt5ctq_iFKDAyrSQ" rel="nofollow" target="_BLANK">
+     <i class="fa fa-youtube-play" style="color:#fff;">
+     </i>
+    </a>
+   </div>
+  </div>
+ </div>
+ <div id="YouTubeUserTopInfoWrap">
+  <img alt="EagleEye621" id="YouTubeUserTopInfoAvatar" src="https://yt3.ggpht.com/ytc/AAUvwnicYUSOurbMAHCBnydbm4FB9mIaCw1OBzquN4vj=s88-c-k-c0x00ffffff-no-rj" title="EagleEye621"/>
+  <div id="YouTubeUserTopInfoBlockTop">
+   <div>
+    <h1 style="float: left; font-size: 1.4em; font-weight: bold; color:#333; margin: 0px; padding: 0px; margin-right: 5px;">
+     EagleEye621
+    </h1>
+    <div style="float: left; margin-left: 8px;">
+    </div>
+   </div>
+   <div style="clear: both;">
+   </div>
+   <div id="YouTubeUserTopInfoBlock">
+    <div id="YouTubeUserTopFav">
+     <span id="fav-security-token" style="display: none;">
+      d78594f41545bb0b0974c13c0f33752f
+     </span>
+     <div class="UCoJMeovRt5ctq_iFKDAyrSQ" id="fav-bubble" title="Favorite oJMeovRt5ctq_iFKDAyrSQ">
+      <i class="fa fa-heart-o fa-2x" id="fav-youtube" style="color:#f7f7f7;">
+      </i>
+     </div>
+    </div>
+    <div class="YouTubeUserTopInfo">
+     <span class="YouTubeUserTopLight">
+      Uploads
+     </span>
+     <br/>
+     <span style="font-weight: bold;">
+      184
+     </span>
+     <span id="youtube-stats-header-uploads" style="display: none;">
+      184
+     </span>
+    </div>
+    <div class="YouTubeUserTopInfo">
+     <span class="YouTubeUserTopLight">
+      Subscribers
+     </span>
+     <br/>
+     <span style="font-weight: bold;">
+      48.7K
+     </span>
+     <span id="youtube-stats-header-subs" style="display: none;">
+      48.7K
+     </span>
+    </div>
+    <div class="YouTubeUserTopInfo">
+     <span class="YouTubeUserTopLight">
+      Video Views
+     </span>
+     <br/>
+     <span style="font-weight: bold;">
+      7,924,323
+     </span>
+     <span id="youtube-stats-header-views" style="display: none;">
+      7924323
+     </span>
+    </div>
+    <div class="YouTubeUserTopInfo">
+     <span class="YouTubeUserTopLight">
+      Country
+     </span>
+     <br/>
+     <span style="font-weight: bold;">
+      <a href="//socialblade.com/youtube/top/country/us" id="youtube-user-page-country" style="color:#555;">
+       US
+      </a>
+     </span>
+     <span id="youtube-stats-header-country" style="display: none;">
+      US
+     </span>
+    </div>
+    <div class="YouTubeUserTopInfo">
+     <span class="YouTubeUserTopLight">
+      Channel Type
+      <sup>
+       <span class="hint--top" data-hint="This metric is derived from the users 10 most recent public videos.
+Social Blade uses the channeltype that occurs most." style="text-transform: none; padding-left: 5px;">
+        <i class="fa fa-question-circle" style="color:#999; font-size: 9pt;">
+        </i>
+       </span>
+      </sup>
+     </span>
+     <br/>
+     <span style="font-weight: bold;">
+      <a href="//socialblade.com/youtube/top/category/games" id="youtube-user-page-channeltype" style="color:#555;">
+       Games
+      </a>
+     </span>
+     <span id="youtube-stats-header-channeltype" style="display: none;">
+      games
+     </span>
+    </div>
+    <div class="YouTubeUserTopInfo">
+     <span class="YouTubeUserTopLight">
+      User Created
+     </span>
+     <br/>
+     <span style="font-weight: bold;">
+      Jun 12th, 2019
+     </span>
+    </div>
+    <div style="float: right; margin-top: 1px; margin-right: -10px;">
+    </div>
+   </div>
+  </div>
+ </div>
+ <div id="YouTubeUserMenu">
+  <a href="/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ">
+   User Summary
+  </a>
+  <a href="/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ/futureprojections">
+   Future Projections
+  </a>
+  <a href="/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ/monthly">
+   Detailed Statistics
+  </a>
+  <a href="/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ/otherchans/sbrank">
+   Featured Box
+  </a>
+  <a href="/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ/similarrank">
+   Similar Channels
+  </a>
+  <a href="/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ/videos">
+   User Videos
+  </a>
+  <a href="/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ/realtime">
+   Live Subscriber Count
+  </a>
+  <a href="/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ/achievements">
+   Achievements
+  </a>
+ </div>
+ <div class="dialog_window" id="dialog_favorite_logincheck" title="Favorite Feature">
+  <p>
+   In order to use the favoriting feature on Social Blade, you'll need to be logged into our
+   <a href="/login">
+    dashboard
+   </a>
+   .
+  </p>
+ </div>
+ <div class="dialog_window" id="dialog_edit_afdcheck" title="Edit a YouTube User">
+  <p>
+   In order to edit this user safely, you'll need to be logged into our
+   <a href="/login/redirect/?url=//socialblade.com/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ">
+    dashboard
+   </a>
+   .
+  </p>
+ </div>
+ <div class="dialog_window" id="dialog_favorite_limitreached" title="Favorite Feature">
+  <p style="font-size: 10pt;">
+   It Seems that you've reached your limit on how many you can favorite. If you'd like to get more favorites, please consider upgrading to a premium account
+  </p>
+  <p style="margin-top: 10px;">
+   <a class="core-button core-small core-margin ui-blue" href="/products/subscription" style="color:#fff;">
+    Upgrade to Premium
+   </a>
+  </p>
+ </div>
+ <div style="width: 1260px; margin: 0px auto;">
+  <div id="socialblade-user-container">
+   <div id="socialblade-user-content">
+    <div style="float: left; width: 900px; height: 150px;">
+     <div style="float: left; width: 122px; height: 120px; padding: 10px; background: #eaa001; border-radius: 4px;">
+      <div style="width: 122px; height: 80px; margin-top: 10px; line-height: 80px; text-align: center; color:#fff; font-size: 10pt; font-size: 4.5em; font-weight: bold; background: #eaa001;">
+       B
+      </div>
+      <div style="width: 120px; height: 20px; margin-top: 0px; text-align: center; font-size: 9pt; color:#fff; background: #eaa001;">
+       <span style="text-transform: uppercase; background: #eaa001;">
+        Total Grade
+       </span>
+       <sup>
+        <span class="hint--top" data-hint='The total grade is a visual representation of the "Social Blade Rank" (or SB Rank), based on the ranking against our whole database' style="background: #eaa001;">
+         <i class="fa fa-question-circle" style="color:#fff; font-size: 9pt;">
+         </i>
+        </span>
+       </sup>
+      </div>
+     </div>
+     <div style="float: right; width: 720px; padding: 10px; background: #fff; border-bottom: 2px solid #e2e2e2;">
+      <div style="width: 132px; height: 110px; float: left; border-right: 1px solid #eee; margin: 5px;">
+       <div style="width: 112px; text-align: center; margin-top: 30px;">
+        <p style="font-size: 1.4em; color:#41a200; font-weight: 600;">
+         380,880th
+        </p>
+       </div>
+       <div style="width: 112px; text-align: center;">
+        <span style="text-transform: uppercase; font-size: 9pt; color:#888;">
+         Social Blade Rank
+        </span>
+       </div>
+      </div>
+      <div style="width: 132px; height: 110px; float: left; border-right: 1px solid #eee; margin: 5px;">
+       <div style="width: 112px; text-align: center; margin-top: 30px;">
+        <p style="font-size: 1.4em; color:#41a200; font-weight: 600;">
+         437,367th
+        </p>
+       </div>
+       <div style="width: 112px; text-align: center;">
+        <span style="text-transform: uppercase; font-size: 9pt; color:#888;">
+         Subscriber
+         <br/>
+         Rank
+        </span>
+       </div>
+      </div>
+      <div style="width: 132px; height: 110px; float: left; border-right: 1px solid #eee; margin: 5px;">
+       <div style="width: 112px; text-align: center; margin-top: 30px;">
+        <p style="font-size: 1.4em; color:#41a200; font-weight: 600;">
+         582,064th
+        </p>
+       </div>
+       <div style="width: 112px; text-align: center;">
+        <span style="text-transform: uppercase; font-size: 9pt; color:#888;">
+         Video Views
+         <br/>
+         Rank
+        </span>
+       </div>
+      </div>
+      <div style="width: 132px; height: 110px; float: left; border-right: 1px solid #eee; margin: 5px;">
+       <div style="width: 112px; text-align: center; margin-top: 30px;">
+        <p style="font-size: 1.4em; color:#41a200; font-weight: 600;">
+         74,083rd
+        </p>
+       </div>
+       <div style="width: 112px; text-align: center;">
+        <span style="text-transform: uppercase; font-size: 9pt; color:#888;">
+         Country
+         <br/>
+         Rank
+         <a href="/youtube/top/country/us">
+          <img alt="United States" src="/images/flags/us.png" style="width: 19px; height: 10px;" title="United States"/>
+         </a>
+        </span>
+       </div>
+      </div>
+      <div style="width: 132px; height: 110px; float: left; margin: 5px;">
+       <div style="width: 122px; text-align: center; margin-top: 30px;">
+        <p style="font-size: 1.4em; color:#41a200; font-weight: 600;">
+         38,607th
+        </p>
+       </div>
+       <div style="width: 122px; text-align: center;">
+        <span style="text-transform: uppercase; font-size: 9pt; color:#888;">
+         games
+         <br/>
+         Rank
+        </span>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div style="clear: both;">
+    </div>
+    <div style="float: left; width: 900px; height: 100px; margin-bottom: 10px;">
+     <div style="width: 280px; height: 80px; float: left; background: #fff; padding: 10px; margin-right: 10px; border-bottom: 2px solid #e2e2e2; text-align: center;">
+      <p style="font-size: 1.4em; color:#666; font-weight: 600; padding-top: 14px; padding-left: 30px; text-align: center;">
+       800
+       <sup style="font-size: 9pt;">
+        <span style="color:#e53b00;">
+         <i class="fa fa-caret-down">
+         </i>
+         38.5%
+        </span>
+       </sup>
+      </p>
+      <p style="color:#888; text-transform: uppercase; font-size: 9pt;">
+       Subscribers for the last 30 days
+      </p>
+     </div>
+     <div style="width: 260px; height: 80px; float: left; background: #fff; padding: 10px; margin-right: 10px; border-bottom: 2px solid #e2e2e2; text-align: center;">
+      <p style="font-size: 1.4em; color:#41a200; font-weight: 600; padding-top: 20px;">
+       $66  -  $1.1K
+      </p>
+      <p style="color:#888; text-transform: uppercase; font-size: 9pt;">
+       Estimated Monthly Earnings
+       <sup>
+        <span class="hint--top" data-hint="The default estimated CPM range for Social Blade is $0.25 - $4.00 USD.
+This can be changed in the Social Blade dashboard account settings page." style="text-transform: none;">
+         <i class="fa fa-question-circle" style="color:#999; font-size: 9pt;">
+         </i>
+        </span>
+       </sup>
+      </p>
+     </div>
+     <div style="width: 280px; height: 80px; float: left; background: #fff; padding: 10px; border-bottom: 2px solid #e2e2e2; text-align: center;">
+      <p style="font-size: 1.4em; color:#666; font-weight: 600; padding-top: 14px; padding-left: 30px; text-align: center;">
+       265.342K
+       <sup style="font-size: 9pt;">
+        <span style="color:#e53b00;">
+         <i class="fa fa-caret-down">
+         </i>
+         30.1%
+        </span>
+       </sup>
+      </p>
+      <p style="color:#888; text-transform: uppercase; font-size: 9pt;">
+       Video Views for the last 30 days
+      </p>
+     </div>
+    </div>
+    <div style="clear: both;">
+    </div>
+    <div style="width: 900px; float: left; font-size: 8pt;">
+     <div>
+      <div style="float: left;  padding: 0px 10px; background: #fff; height: 100px; width: 280px; float: left; border-bottom: 2px solid #e2e2e2;">
+       <div data-highcharts-chart="2" id="graph-youtube-weekly-subscribers-container" style="min-width: 280px; width: 280px; height: 100px; overflow: hidden;">
+        <div class="highcharts-container" dir="ltr" id="highcharts-g0cons8-50" style="position: relative; overflow: hidden; width: 280px; height: 100px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; touch-action: manipulation; outline: none;">
+         <svg class="highcharts-root" height="100" style='font-family:"Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;font-size:12px;' version="1.1" viewbox="0 0 280 100" width="280" xmlns="http://www.w3.org/2000/svg">
+          <desc>
+           Created with Highcharts 9.1.0
+          </desc>
+          <defs>
+           <clippath id="highcharts-g0cons8-51-">
+            <rect fill="none" height="50" width="260" x="0" y="0">
+            </rect>
+           </clippath>
+          </defs>
+          <rect class="highcharts-background" fill="#ffffff" height="100" rx="0" ry="0" width="280" x="0" y="0">
+          </rect>
+          <rect class="highcharts-plot-background" fill="none" height="50" width="260" x="10" y="10">
+          </rect>
+          <rect class="highcharts-plot-border" data-z-index="1" fill="none" height="50" width="260" x="10" y="10">
+          </rect>
+          <g class="highcharts-series-group" data-z-index="3">
+           <g class="highcharts-series highcharts-series-0 highcharts-area-series" clip-path="url(#highcharts-g0cons8-51-)" data-z-index="0.1" opacity="1" transform="translate(10,10) scale(1 1)">
+            <path class="highcharts-area" d="M 2.5490196078431 43.75 L 7.1359443520339 40.625 L 12.37814405968 32.8125 L 17.620343767327 35.9375 L 23.517818438429 39.0625 L 28.10474318262 43.75 L 33.346942890267 43.75 L 37.933867634457 46.875 L 43.176067342104 42.1875 L 49.728816976662 40.625 L 54.315741720853 37.5 L 58.902666465044 37.5 L 63.489591209234 40.625 L 68.076515953425 40.625 L 72.663440697616 34.375 L 77.250365441807 10.9375 L 81.837290185997 20.3125 L 87.079489893644 31.25 L 91.666414637835 29.6875 L 96.253339382025 17.1875 L 101.49553908967 32.8125 L 106.73773879732 42.1875 L 111.32466354151 45.3125 L 115.9115882857 48.4375 L 120.49851302989 45.3125 L 125.08543777408 43.75 L 129.67236251827 43.75 L 134.28659038594 43.75 L 138.87351513013 43.75 L 143.46043987432 45.3125 L 149.35791454542 43.75 L 154.60011425307 45.3125 L 159.18703899726 45.3125 L 163.77396374145 45.3125 L 168.36088848564 43.75 L 172.94781322983 43.75 L 177.53473797402 43.75 L 182.12166271821 43.75 L 186.70858746241 45.3125 L 191.2955122066 43.75 L 195.88243695079 45.3125 L 200.46936169498 45.3125 L 205.71156140262 43.75 L 210.29848614682 45.3125 L 214.88541089101 46.875 L 219.4723356352 45.3125 L 225.99778214628 45.3125 L 232.55053178084 43.75 L 237.13745652503 46.875 L 241.72438126922 48.4375 L 246.31130601341 48.4375 L 252.86405564797 45.3125 L 257.45098039216 46.875 L 257.45098039216 50 L 252.86405564797 50 L 246.31130601341 50 L 241.72438126922 50 L 237.13745652503 50 L 232.55053178084 50 L 225.99778214628 50 L 219.4723356352 50 L 214.88541089101 50 L 210.29848614682 50 L 205.71156140262 50 L 200.46936169498 50 L 195.88243695079 50 L 191.2955122066 50 L 186.70858746241 50 L 182.12166271821 50 L 177.53473797402 50 L 172.94781322983 50 L 168.36088848564 50 L 163.77396374145 50 L 159.18703899726 50 L 154.60011425307 50 L 149.35791454542 50 L 143.46043987432 50 L 138.87351513013 50 L 134.28659038594 50 L 129.67236251827 50 L 125.08543777408 50 L 120.49851302989 50 L 115.9115882857 50 L 111.32466354151 50 L 106.73773879732 50 L 101.49553908967 50 L 96.253339382025 50 L 91.666414637835 50 L 87.079489893644 50 L 81.837290185997 50 L 77.250365441807 50 L 72.663440697616 50 L 68.076515953425 50 L 63.489591209234 50 L 58.902666465044 50 L 54.315741720853 50 L 49.728816976662 50 L 43.176067342104 50 L 37.933867634457 50 L 33.346942890267 50 L 28.10474318262 50 L 23.517818438429 50 L 17.620343767327 50 L 12.37814405968 50 L 7.1359443520339 50 L 2.5490196078431 50 Z" data-z-index="0" fill="rgba(200,67,41,0.75)">
+            </path>
+            <path class="highcharts-graph" d="M 2.5490196078431 43.75 L 7.1359443520339 40.625 L 12.37814405968 32.8125 L 17.620343767327 35.9375 L 23.517818438429 39.0625 L 28.10474318262 43.75 L 33.346942890267 43.75 L 37.933867634457 46.875 L 43.176067342104 42.1875 L 49.728816976662 40.625 L 54.315741720853 37.5 L 58.902666465044 37.5 L 63.489591209234 40.625 L 68.076515953425 40.625 L 72.663440697616 34.375 L 77.250365441807 10.9375 L 81.837290185997 20.3125 L 87.079489893644 31.25 L 91.666414637835 29.6875 L 96.253339382025 17.1875 L 101.49553908967 32.8125 L 106.73773879732 42.1875 L 111.32466354151 45.3125 L 115.9115882857 48.4375 L 120.49851302989 45.3125 L 125.08543777408 43.75 L 129.67236251827 43.75 L 134.28659038594 43.75 L 138.87351513013 43.75 L 143.46043987432 45.3125 L 149.35791454542 43.75 L 154.60011425307 45.3125 L 159.18703899726 45.3125 L 163.77396374145 45.3125 L 168.36088848564 43.75 L 172.94781322983 43.75 L 177.53473797402 43.75 L 182.12166271821 43.75 L 186.70858746241 45.3125 L 191.2955122066 43.75 L 195.88243695079 45.3125 L 200.46936169498 45.3125 L 205.71156140262 43.75 L 210.29848614682 45.3125 L 214.88541089101 46.875 L 219.4723356352 45.3125 L 225.99778214628 45.3125 L 232.55053178084 43.75 L 237.13745652503 46.875 L 241.72438126922 48.4375 L 246.31130601341 48.4375 L 252.86405564797 45.3125 L 257.45098039216 46.875" data-z-index="1" fill="none" stroke="#c84329" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </path>
+            <path class="highcharts-tracker-line" d="M 2.5490196078431 43.75 L 7.1359443520339 40.625 L 12.37814405968 32.8125 L 17.620343767327 35.9375 L 23.517818438429 39.0625 L 28.10474318262 43.75 L 33.346942890267 43.75 L 37.933867634457 46.875 L 43.176067342104 42.1875 L 49.728816976662 40.625 L 54.315741720853 37.5 L 58.902666465044 37.5 L 63.489591209234 40.625 L 68.076515953425 40.625 L 72.663440697616 34.375 L 77.250365441807 10.9375 L 81.837290185997 20.3125 L 87.079489893644 31.25 L 91.666414637835 29.6875 L 96.253339382025 17.1875 L 101.49553908967 32.8125 L 106.73773879732 42.1875 L 111.32466354151 45.3125 L 115.9115882857 48.4375 L 120.49851302989 45.3125 L 125.08543777408 43.75 L 129.67236251827 43.75 L 134.28659038594 43.75 L 138.87351513013 43.75 L 143.46043987432 45.3125 L 149.35791454542 43.75 L 154.60011425307 45.3125 L 159.18703899726 45.3125 L 163.77396374145 45.3125 L 168.36088848564 43.75 L 172.94781322983 43.75 L 177.53473797402 43.75 L 182.12166271821 43.75 L 186.70858746241 45.3125 L 191.2955122066 43.75 L 195.88243695079 45.3125 L 200.46936169498 45.3125 L 205.71156140262 43.75 L 210.29848614682 45.3125 L 214.88541089101 46.875 L 219.4723356352 45.3125 L 225.99778214628 45.3125 L 232.55053178084 43.75 L 237.13745652503 46.875 L 241.72438126922 48.4375 L 246.31130601341 48.4375 L 252.86405564797 45.3125 L 257.45098039216 46.875" data-z-index="2" fill="none" stroke="rgba(192,192,192,0.0001)" stroke-linecap="round" stroke-linejoin="round" stroke-width="22" visibility="visible">
+            </path>
+           </g>
+           <g class="highcharts-markers highcharts-series-0 highcharts-area-series highcharts-tracker" clip-path="none" data-z-index="0.1" opacity="1" transform="translate(10,10) scale(1 1)">
+           </g>
+          </g>
+          <text class="highcharts-title" data-z-index="4" style="color:#888888;font-size:9pt;fill:#888888;" text-anchor="middle" x="140" y="83">
+           TOTAL SUBSCRIBERS (WEEKLY)
+          </text>
+          <text class="highcharts-subtitle" data-z-index="4" style="color:#666666;fill:#666666;" text-anchor="middle" x="140" y="24">
+          </text>
+          <text class="highcharts-caption" data-z-index="4" style="color:#666666;fill:#666666;" text-anchor="start" x="10" y="97">
+          </text>
+          <g class="highcharts-legend" data-z-index="7">
+           <rect class="highcharts-legend-box" fill="none" height="8" rx="0" ry="0" visibility="hidden" width="8" x="0" y="0">
+           </rect>
+           <g data-z-index="1">
+            <g>
+            </g>
+           </g>
+          </g>
+         </svg>
+        </div>
+       </div>
+      </div>
+      <div style="width: 270px; height: 100px; float: left; background: #fff; padding: 0px 5px; border-bottom: 2px solid #e2e2e2; text-align: center; margin-left: 10px; margin-right: 10px;">
+       <p style="font-size: 2em; color:#41a200; font-weight: 600; padding-top: 20px;">
+        $796  -  $12.7K
+       </p>
+       <p style="color:#888; text-transform: uppercase; font-size: 9.5pt;">
+        Estimated Yearly Earnings
+        <sup>
+         <span class="hint--top" data-hint="The default estimated CPM range for Social Blade is $0.25 - $4.00 USD.
+This can be changed in the Social Blade dashboard account settings page." style="text-transform: none;">
+          <i class="fa fa-question-circle" style="color:#999; font-size: 9pt;">
+          </i>
+         </span>
+        </sup>
+       </p>
+      </div>
+      <div style="float: left;  padding: 0px 10px; background: #fff; height: 100px; width: 280px; float: left; border-bottom: 2px solid #e2e2e2;">
+       <div data-highcharts-chart="3" id="graph-youtube-weekly-vidviews-container" style="min-width: 280px; width: 280px; height: 100px; overflow: hidden;">
+        <div class="highcharts-container" dir="ltr" id="highcharts-g0cons8-106" style="position: relative; overflow: hidden; width: 280px; height: 100px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; touch-action: manipulation; outline: none;">
+         <svg class="highcharts-root" height="100" style='font-family:"Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;font-size:12px;' version="1.1" viewbox="0 0 280 100" width="280" xmlns="http://www.w3.org/2000/svg">
+          <desc>
+           Created with Highcharts 9.1.0
+          </desc>
+          <defs>
+           <clippath id="highcharts-g0cons8-107-">
+            <rect fill="none" height="50" width="260" x="0" y="0">
+            </rect>
+           </clippath>
+          </defs>
+          <rect class="highcharts-background" fill="#ffffff" height="100" rx="0" ry="0" width="280" x="0" y="0">
+          </rect>
+          <rect class="highcharts-plot-background" fill="none" height="50" width="260" x="10" y="10">
+          </rect>
+          <rect class="highcharts-plot-border" data-z-index="1" fill="none" height="50" width="260" x="10" y="10">
+          </rect>
+          <g class="highcharts-series-group" data-z-index="3">
+           <g class="highcharts-series highcharts-series-0 highcharts-area-series" clip-path="url(#highcharts-g0cons8-107-)" data-z-index="0.1" opacity="1" transform="translate(10,10) scale(1 1)">
+            <path class="highcharts-area" d="M 2.5490196078431 33.778437499999995 L 7.1359443520339 33.6803125 L 12.37814405968 30.638906249999998 L 17.620343767327 28.224999999999998 L 23.517818438429 32.324687499999996 L 28.10474318262 38.09046875 L 33.346942890267 38.47515625 L 37.933867634457 41.22734375 L 43.176067342104 37.859843749999996 L 49.728816976662 29.8671875 L 54.315741720853 30.54296875 L 58.902666465044 29.75546875 L 63.489591209234 32.4075 L 68.076515953425 33.88515625 L 72.663440697616 29.978906249999998 L 77.250365441807 16.6084375 L 81.837290185997 17.602656250000003 L 87.079489893644 25.224843749999998 L 91.666414637835 26.170312499999998 L 96.253339382025 12.343281249999997 L 101.49553908967 26.87234375 L 106.73773879732 35.2746875 L 111.32466354151 39.74390625 L 115.9115882857 39.6365625 L 120.49851302989 39.2565625 L 125.08543777408 38.1334375 L 129.67236251827 36.85375 L 134.28659038594 36.260625 L 138.87351513013 36.38765625 L 143.46043987432 36.87109375 L 149.35791454542 33.191874999999996 L 154.60011425307 36.671406250000004 L 159.18703899726 37.70765625 L 163.77396374145 38.21703125 L 168.36088848564 35.886250000000004 L 172.94781322983 36.85515625 L 177.53473797402 36.06046875 L 182.12166271821 35.89078125 L 186.70858746241 37.02765625 L 191.2955122066 35.125468749999996 L 195.88243695079 34.52625 L 200.46936169498 36.5990625 L 205.71156140262 32.6890625 L 210.29848614682 36.1884375 L 214.88541089101 38.1190625 L 219.4723356352 36.2346875 L 225.99778214628 33.728125 L 232.55053178084 34.77234375 L 237.13745652503 38.769062500000004 L 241.72438126922 40.03453125 L 246.31130601341 40.671406250000004 L 252.86405564797 38.04328125 L 257.45098039216 42.965 L 257.45098039216 50 L 252.86405564797 50 L 246.31130601341 50 L 241.72438126922 50 L 237.13745652503 50 L 232.55053178084 50 L 225.99778214628 50 L 219.4723356352 50 L 214.88541089101 50 L 210.29848614682 50 L 205.71156140262 50 L 200.46936169498 50 L 195.88243695079 50 L 191.2955122066 50 L 186.70858746241 50 L 182.12166271821 50 L 177.53473797402 50 L 172.94781322983 50 L 168.36088848564 50 L 163.77396374145 50 L 159.18703899726 50 L 154.60011425307 50 L 149.35791454542 50 L 143.46043987432 50 L 138.87351513013 50 L 134.28659038594 50 L 129.67236251827 50 L 125.08543777408 50 L 120.49851302989 50 L 115.9115882857 50 L 111.32466354151 50 L 106.73773879732 50 L 101.49553908967 50 L 96.253339382025 50 L 91.666414637835 50 L 87.079489893644 50 L 81.837290185997 50 L 77.250365441807 50 L 72.663440697616 50 L 68.076515953425 50 L 63.489591209234 50 L 58.902666465044 50 L 54.315741720853 50 L 49.728816976662 50 L 43.176067342104 50 L 37.933867634457 50 L 33.346942890267 50 L 28.10474318262 50 L 23.517818438429 50 L 17.620343767327 50 L 12.37814405968 50 L 7.1359443520339 50 L 2.5490196078431 50 Z" data-z-index="0" fill="rgba(200,67,41,0.75)">
+            </path>
+            <path class="highcharts-graph" d="M 2.5490196078431 33.778437499999995 L 7.1359443520339 33.6803125 L 12.37814405968 30.638906249999998 L 17.620343767327 28.224999999999998 L 23.517818438429 32.324687499999996 L 28.10474318262 38.09046875 L 33.346942890267 38.47515625 L 37.933867634457 41.22734375 L 43.176067342104 37.859843749999996 L 49.728816976662 29.8671875 L 54.315741720853 30.54296875 L 58.902666465044 29.75546875 L 63.489591209234 32.4075 L 68.076515953425 33.88515625 L 72.663440697616 29.978906249999998 L 77.250365441807 16.6084375 L 81.837290185997 17.602656250000003 L 87.079489893644 25.224843749999998 L 91.666414637835 26.170312499999998 L 96.253339382025 12.343281249999997 L 101.49553908967 26.87234375 L 106.73773879732 35.2746875 L 111.32466354151 39.74390625 L 115.9115882857 39.6365625 L 120.49851302989 39.2565625 L 125.08543777408 38.1334375 L 129.67236251827 36.85375 L 134.28659038594 36.260625 L 138.87351513013 36.38765625 L 143.46043987432 36.87109375 L 149.35791454542 33.191874999999996 L 154.60011425307 36.671406250000004 L 159.18703899726 37.70765625 L 163.77396374145 38.21703125 L 168.36088848564 35.886250000000004 L 172.94781322983 36.85515625 L 177.53473797402 36.06046875 L 182.12166271821 35.89078125 L 186.70858746241 37.02765625 L 191.2955122066 35.125468749999996 L 195.88243695079 34.52625 L 200.46936169498 36.5990625 L 205.71156140262 32.6890625 L 210.29848614682 36.1884375 L 214.88541089101 38.1190625 L 219.4723356352 36.2346875 L 225.99778214628 33.728125 L 232.55053178084 34.77234375 L 237.13745652503 38.769062500000004 L 241.72438126922 40.03453125 L 246.31130601341 40.671406250000004 L 252.86405564797 38.04328125 L 257.45098039216 42.965" data-z-index="1" fill="none" stroke="#c84329" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+            </path>
+            <path class="highcharts-tracker-line" d="M 2.5490196078431 33.778437499999995 L 7.1359443520339 33.6803125 L 12.37814405968 30.638906249999998 L 17.620343767327 28.224999999999998 L 23.517818438429 32.324687499999996 L 28.10474318262 38.09046875 L 33.346942890267 38.47515625 L 37.933867634457 41.22734375 L 43.176067342104 37.859843749999996 L 49.728816976662 29.8671875 L 54.315741720853 30.54296875 L 58.902666465044 29.75546875 L 63.489591209234 32.4075 L 68.076515953425 33.88515625 L 72.663440697616 29.978906249999998 L 77.250365441807 16.6084375 L 81.837290185997 17.602656250000003 L 87.079489893644 25.224843749999998 L 91.666414637835 26.170312499999998 L 96.253339382025 12.343281249999997 L 101.49553908967 26.87234375 L 106.73773879732 35.2746875 L 111.32466354151 39.74390625 L 115.9115882857 39.6365625 L 120.49851302989 39.2565625 L 125.08543777408 38.1334375 L 129.67236251827 36.85375 L 134.28659038594 36.260625 L 138.87351513013 36.38765625 L 143.46043987432 36.87109375 L 149.35791454542 33.191874999999996 L 154.60011425307 36.671406250000004 L 159.18703899726 37.70765625 L 163.77396374145 38.21703125 L 168.36088848564 35.886250000000004 L 172.94781322983 36.85515625 L 177.53473797402 36.06046875 L 182.12166271821 35.89078125 L 186.70858746241 37.02765625 L 191.2955122066 35.125468749999996 L 195.88243695079 34.52625 L 200.46936169498 36.5990625 L 205.71156140262 32.6890625 L 210.29848614682 36.1884375 L 214.88541089101 38.1190625 L 219.4723356352 36.2346875 L 225.99778214628 33.728125 L 232.55053178084 34.77234375 L 237.13745652503 38.769062500000004 L 241.72438126922 40.03453125 L 246.31130601341 40.671406250000004 L 252.86405564797 38.04328125 L 257.45098039216 42.965" data-z-index="2" fill="none" stroke="rgba(192,192,192,0.0001)" stroke-linecap="round" stroke-linejoin="round" stroke-width="22" visibility="visible">
+            </path>
+           </g>
+           <g class="highcharts-markers highcharts-series-0 highcharts-area-series highcharts-tracker" clip-path="none" data-z-index="0.1" opacity="1" transform="translate(10,10) scale(1 1)">
+           </g>
+          </g>
+          <text class="highcharts-title" data-z-index="4" style="color:#888888;font-size:9pt;fill:#888888;" text-anchor="middle" x="140" y="83">
+           TOTAL VIDEO VIEWS (WEEKLY)
+          </text>
+          <text class="highcharts-subtitle" data-z-index="4" style="color:#666666;fill:#666666;" text-anchor="middle" x="140" y="24">
+          </text>
+          <text class="highcharts-caption" data-z-index="4" style="color:#666666;fill:#666666;" text-anchor="start" x="10" y="97">
+          </text>
+          <g class="highcharts-legend" data-z-index="7">
+           <rect class="highcharts-legend-box" fill="none" height="8" rx="0" ry="0" visibility="hidden" width="8" x="0" y="0">
+           </rect>
+           <g data-z-index="1">
+            <g>
+            </g>
+           </g>
+          </g>
+         </svg>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div style="clear: both;">
+     </div>
+     <div style="width: 860px; min-height: 90px; height: auto; padding: 20px; background: #fff; float: left; margin: 00px 0px 10px 0px;">
+      <div style="width: 728px; height: auto; min-height: 90px; margin: 0px auto;">
+       <div style="width: 726px; margin: 1px auto 10px auto;">
+        <div>
+         <div id="cdm-zone-01">
+         </div>
+        </div>
+        <div class="socialblade-heartbeat" style="display: none;">
+         <div style="width: 726px; height: 87px; background: #d37a74; border: 2px solid #b3382c;">
+          <i class="fa fa-exclamation-triangle fa-5x" style="margin: 12px 30px; width: 60px; color: #fff; float: left;">
+          </i>
+          <div style="margin: 0px auto; width: 90%; color:#fff; margin-top: 15px; font-size: 10pt; line-height: 1.5em;">
+           Hello, visitor! Please consider adding SocialBlade.com to your adblock whitelist. Our ads support the development and upkeep of the site. Upgrade to a
+           <a href="/products/subscription" style="color:#fff;">
+            Premium Subscription
+           </a>
+           to load the site without ads.
+          </div>
+         </div>
+         <div style="clear: both;">
+         </div>
+        </div>
+       </div>
+      </div>
+      <div style="clear: both;">
+      </div>
+     </div>
+     <div style="clear: both;">
+     </div>
+     <div style="width: 860px; background: #333; padding: 20px; text-transform: uppercase; color:#fff;">
+      <h2 style="font-size: 10pt;">
+       YouTube Stats Summary / User Statistics for EagleEye621 (2021-04-26 - 2021-05-11)
+      </h2>
+     </div>
+     <div style="width: 860px;height: 30px; line-height: 30px; background: #444; padding: 0px 20px; text-transform: uppercase; color:#fff; font-size: 10pt;">
+      <div style="width: 160px; float: left;">
+       DATE
+      </div>
+      <div style="width: 205px; float: left;">
+       SUBSCRIBERS
+      </div>
+      <div style="width: 240px; float: left;">
+       VIDEO VIEWS
+      </div>
+      <div style="width: 230px; float: left;" title="Estimated Earnings CPM is between $0.25 and $4.00. Please check our FAQ for more info">
+       ESTIMATED EARNINGS
+      </div>
+     </div>
+    </div>
+    <div style="clear: both;">
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #f8f8f8;; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-04-26
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Mon
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#41a200;">
+        +100
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.3K
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#41a200;">
+        +5,976
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,809,053
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $1   -   $24
+     </div>
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #fcfcfc; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-04-27
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Tue
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#ccc;">
+        --
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.3K
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#41a200;">
+        +9,606
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,818,659
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $2   -   $38
+     </div>
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #f8f8f8;; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-04-30
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Fri
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#41a200;">
+        +200
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.5K
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#41a200;">
+        +30,386
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,849,045
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $8   -   $122
+     </div>
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #fcfcfc; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-05-01
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Sat
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#ccc;">
+        --
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.5K
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#41a200;">
+        +7,796
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,856,841
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $2   -   $31
+     </div>
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #f8f8f8;; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-05-02
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Sun
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#ccc;">
+        --
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.5K
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#41a200;">
+        +6,324
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,863,165
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $2   -   $25
+     </div>
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #fcfcfc; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-05-03
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Mon
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#ccc;">
+        --
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.5K
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#41a200;">
+        +9,912
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,873,077
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $2   -   $40
+     </div>
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #f8f8f8;; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-05-04
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Tue
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#ccc;">
+        --
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.5K
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#ccc;">
+        --
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,873,077
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $0   -   $0
+     </div>
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #fcfcfc; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-05-05
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Wed
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#41a200;">
+        +100
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.6K
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#41a200;">
+        +7,270
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,880,347
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $2   -   $29
+     </div>
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #f8f8f8;; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-05-06
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Thu
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#ccc;">
+        --
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.6K
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#41a200;">
+        +6,820
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,887,167
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $2   -   $27
+     </div>
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #fcfcfc; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-05-07
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Fri
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#ccc;">
+        --
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.6K
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#41a200;">
+        +6,460
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,893,627
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $2   -   $26
+     </div>
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #f8f8f8;; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-05-08
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Sat
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#41a200;">
+        +100
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.7K
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#41a200;">
+        +6,726
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,900,353
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $2   -   $27
+     </div>
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #fcfcfc; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-05-09
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Sun
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#ccc;">
+        --
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.7K
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#41a200;">
+        +9,816
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,910,169
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $2   -   $39
+     </div>
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #f8f8f8;; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-05-10
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Mon
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#ccc;">
+        --
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.7K
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#41a200;">
+        +7,932
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,918,101
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $2   -   $32
+     </div>
+    </div>
+    <div style="width: 860px; height: 32px; line-height: 32px; background: #fcfcfc; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="float: left; width: 95px;">
+      2021-05-11
+     </div>
+     <div style="float: left; width: 20px; color:#9a9a9a; text-align: right; padding-right: 44px;">
+      Tue
+     </div>
+     <div style="float: left; width: 205px;">
+      <div style="width: 65px; float: left;">
+       <span style="color:#ccc;">
+        --
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       48.7K
+       <a href="/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ/realtime" style="margin-left: 15px; color:#d64e33; font-size: 1.2em;">
+        <span class="hint--top" data-hint="See live subscriber count">
+         <i aria-hidden="true" class="fa fa-clock-o">
+         </i>
+         LIVE
+        </span>
+       </a>
+      </div>
+     </div>
+     <div style="float: left; width: 240px;">
+      <div style="width: 85px; float: left;">
+       <span style="color:#41a200;">
+        +6,222
+       </span>
+      </div>
+      <div style="width: 140px; float: left;">
+       7,924,323
+      </div>
+     </div>
+     <div style="float: left; width: 165px; height: 30px;">
+      $2   -   $25
+     </div>
+    </div>
+    <div style="width: 860px; height: 50px; background: #fff; padding: 0px 20px; color:#444; font-size: 9pt; border-top: 1px solid #eee;">
+     <div style="width: 160px; float: left; height: 40px; line-height: 40px; position: relative;">
+      Daily Averages
+      <span class="youtube-user-share" data-role="share-daily-average">
+       <i class="fa fa-share-alt" style="color:#777; padding-left: 2px; cursor:pointer;">
+       </i>
+      </span>
+      <br/>
+      <div data-type="popup" id="youtube-user-share-daily" style="position: absolute; background: #fff; border: 1px solid #ccc; padding: 20px 35px; z-index: 100000000; display: none;">
+       <a href="http://www.facebook.com/sharer/sharer.php?u=https://socialblade.com/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ&amp;t=On YouTube UCoJMeovRt5ctq_iFKDAyrSQ gets 27 subs per day, 8.8K Views per day ( $2 - $35 per day )" style="text-decoration: none;" target="_blank">
+        <div style="width: 100px; height: 20px; line-height: 20px; padding: 5px 15px; background: #3b5998; color:#fff; text-transform: uppercase; font-weight: bold;">
+         <i aria-hidden="false" class="fa fa-facebook" style="padding-right: 4px;">
+         </i>
+         Share
+        </div>
+       </a>
+       <a href="http://twitter.com/intent/tweet?text=On YouTube @oJMeovRt5ctq_iFKDAyrSQ gets 27 subs per day, 8.8K Views per day ( $2 - $35 per day ) - https://socialblade.com/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ via @SocialBlade" style="text-decoration: none;" target="_blank">
+        <div style="width: 100px; margin-top: 4px; height: 20px; line-height: 20px; padding: 5px 15px; background: #1bb2e9; color:#fff; text-transform: uppercase; font-weight: bold;">
+         <i aria-hidden="false" class="fa fa-twitter" style="padding-right: 4px;">
+         </i>
+         Tweet
+        </div>
+       </a>
+      </div>
+     </div>
+     <div id="averagedailysubs" style="width: 205px; height: 40px; line-height: 40px; float: left;">
+      <span style="color:#41a200;">
+       +27
+      </span>
+     </div>
+     <div id="averagedailyviews" style="width: 240px; height: 40px; line-height: 40px; float: left;">
+      <span style="color:#41a200;">
+       +8,845
+      </span>
+     </div>
+     <div style="width: 205px; height: 40px; line-height: 40px; float: left;">
+      $2  -  $35
+      <sup>
+       <span class="hint--top" data-hint="The default estimated CPM range for Social Blade is $0.25 - $4.00 USD." style="text-transform: none; padding-left: 5px;">
+        <i class="fa fa-question-circle" style="color:#999; font-size: 9pt;">
+        </i>
+       </span>
+      </sup>
+     </div>
+    </div>
+    <div style="width: 860px; height: 50px; background: #fff; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="width: 160px; float: left; height: 40px; line-height: 40px; position: relative;">
+      Weekly Averages
+      <span class="youtube-user-share" data-role="share-weekly-average">
+       <i class="fa fa-share-alt" style="color:#777; padding-left: 2px; cursor:pointer;">
+       </i>
+      </span>
+      <br/>
+      <div data-type="popup" id="youtube-user-share-weekly" style="position: absolute; background: #fff; border: 1px solid #ccc; padding: 20px 35px; z-index: 100000000; display: none;">
+       <a href="http://www.facebook.com/sharer/sharer.php?u=https://socialblade.com/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ&amp;t=On YouTube UCoJMeovRt5ctq_iFKDAyrSQ gets 189 subs per week, 61.9K Views per week ( $15 - $248 per week )" style="text-decoration: none;" target="_blank">
+        <div style="width: 100px; height: 20px; line-height: 20px; padding: 5px 15px; background: #3b5998; color:#fff; text-transform: uppercase; font-weight: bold;">
+         <i aria-hidden="false" class="fa fa-facebook" style="padding-right: 4px;">
+         </i>
+         Share
+        </div>
+       </a>
+       <a href="http://twitter.com/intent/tweet?text=On YouTube @oJMeovRt5ctq_iFKDAyrSQ gets 189 subs per week, 61.9K Views per week ( $15 - $248 per week ) - https://socialblade.com/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ via @SocialBlade" style="text-decoration: none;" target="_blank">
+        <div style="width: 100px; margin-top: 4px; height: 20px; line-height: 20px; padding: 5px 15px; background: #1bb2e9; color:#fff; text-transform: uppercase; font-weight: bold;">
+         <i aria-hidden="false" class="fa fa-twitter" style="padding-right: 4px;">
+         </i>
+         Tweet
+        </div>
+       </a>
+      </div>
+     </div>
+     <div style="width: 205px; height: 40px; line-height: 40px; float: left;">
+      <span style="color:#41a200;">
+       +189
+      </span>
+     </div>
+     <div style="width: 240px; height: 40px; line-height: 40px; float: left;">
+      <span style="color:#41a200;">
+       +61,915
+      </span>
+     </div>
+     <div style="width: 225px; height: 40px; line-height: 40px; float: left;">
+      $15  -  $248
+      <sup>
+       <span class="hint--top" data-hint="The default estimated CPM range for Social Blade is $0.25 - $4.00 USD." style="text-transform: none; padding-left: 5px;">
+        <i class="fa fa-question-circle" style="color:#999; font-size: 9pt;">
+        </i>
+       </span>
+      </sup>
+     </div>
+    </div>
+    <div style="width: 860px; height: 50px; background: #fff; padding: 0px 20px; color:#444; font-size: 9pt; border-bottom: 1px solid #eee;">
+     <div style="width: 160px; float: left; height: 40px; line-height: 40px; position: relative;">
+      Last 30 Days
+      <span class="youtube-user-share" data-role="share-monthly-average">
+       <i class="fa fa-share-alt" style="color:#777; padding-left: 2px; cursor:pointer;">
+       </i>
+      </span>
+      <br/>
+      <div data-type="popup" id="youtube-user-share-monthly" style="position: absolute; background: #fff; border: 1px solid #ccc; padding: 20px 35px; z-index: 100000000; display: none;">
+       <a href="http://www.facebook.com/sharer/sharer.php?u=https://socialblade.com/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ&amp;t=On YouTube UCoJMeovRt5ctq_iFKDAyrSQ gets 800 subs per month, 265.3K Views per month ( $66 - $1.1K per month )" style="text-decoration: none;" target="_blank">
+        <div style="width: 100px; height: 20px; line-height: 20px; padding: 5px 15px; background: #3b5998; color:#fff; text-transform: uppercase; font-weight: bold;">
+         <i aria-hidden="false" class="fa fa-facebook" style="padding-right: 4px;">
+         </i>
+         Share
+        </div>
+       </a>
+       <a href="http://twitter.com/intent/tweet?text=On YouTube @oJMeovRt5ctq_iFKDAyrSQ gets 800 subs per month, 265.3K Views per month ( $66 - $1.1K per month ) - https://socialblade.com/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ via @SocialBlade" style="text-decoration: none;" target="_blank">
+        <div style="width: 100px; margin-top: 4px; height: 20px; line-height: 20px; padding: 5px 15px; background: #1bb2e9; color:#fff; text-transform: uppercase; font-weight: bold;">
+         <i aria-hidden="false" class="fa fa-twitter" style="padding-right: 4px;">
+         </i>
+         Tweet
+        </div>
+       </a>
+      </div>
+     </div>
+     <div style="width: 205px; height: 40px; line-height: 40px; float: left;">
+      <span style="color:#41a200;">
+       +800
+      </span>
+     </div>
+     <div style="width: 240px; height: 40px; line-height: 40px; float: left;">
+      <span style="color:#41a200;">
+       +265,342
+      </span>
+     </div>
+     <div style="width: 225px; height: 40px; line-height: 40px; float: left;">
+      $66  -  $1.1K
+      <sup>
+       <span class="hint--top" data-hint="The default estimated CPM range for Social Blade is $0.25 - $4.00 USD." style="text-transform: none; padding-left: 5px;">
+        <i class="fa fa-question-circle" style="color:#999; font-size: 9pt;">
+        </i>
+       </span>
+      </sup>
+     </div>
+    </div>
+    <div class="OrangeButtonWrap">
+     <a href="/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ/monthly" rel="nofollow">
+      <div class="OrangeButton">
+       See Full Monthly Statistics
+      </div>
+     </a>
+     <a href="https://www.facebook.com/sharer/sharer.php?u=http://socialblade.com/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ" rel="nofollow" target="_blank">
+      <div class="FacebookButton">
+       Share on Facebook
+      </div>
+     </a>
+     <a href="http://twitter.com/intent/tweet?text=Check out the Social Blade @YouTube Stats for  at http://socialblade.com/youtube/channel/UCoJMeovRt5ctq_iFKDAyrSQ via @SocialBlade&amp;hashtags=Youtube" rel="nofollow" target="_blank">
+      <div class="TwitterButton">
+       Tweet This
+      </div>
+     </a>
+    </div>
+    <div style="clear: both;">
+    </div>
+    <script type="text/javascript">
+     $(function () { 
+        (function(H) {
+            H.seriesTypes.line.prototype.requireSorting = false;
+            
+        })(Highcharts)
+      
+
+
+        Highcharts.chart('graph-youtube-monthly-subscribers-container', {
+            chart: { type: 'spline', zoomType: 'xy', resetZoomButton: { position: { x: 0,  y: -52 } } },  
+            credits: { enabled: false },		    
+            title: { text: 'Monthly Gained Subscribers for \'EagleEye621\'' },
+            xAxis: {
+                 //type: 'datetime', labels: { overflow: 'justify' }
+                    type: 'datetime',
+                    dateTimeLabelFormats: { // don't display the dummy year
+                        month: '%b %y',
+                        year: '%b'
+                    },
+                    title: {
+                        text: ''
+                    },
+                    events: {
+                        afterSetExtremes: function (e) {
+                            if(e.trigger == "zoom") {
+                                this.chart.update({
+                                    tooltip:
+                                    {
+                                        enabled: true
+                                    }
+                                });
+                            }
+                        }
+                    }                                      
+                 },
+            yAxis: { title: { text: 'Subscribers' }, minorGridLineWidth: 1, gridLineWidth: 1, alternateGridColor: null, },
+            tooltip: { valueSuffix: ' Subscribers', hideDelay: '50',
+                //Highcharts.dateFormat('%e - %b - %Y', new Date(this.x)) + ' date, '
+                formatter: function() {
+                    var dateform = '<span style = "font-size: 5pt;">Month of ' +  Highcharts.dateFormat('%B, %Y', new Date(this.x)) + '</span><br />'
+                    dateform += '<span style="color:#cc2323">●</span> ' + this.series.name +': <b>' + this.y.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') + " Subscribers</b>";
+                    return  dateform;
+                },
+                positioner: function(labelWidth, labelHeight, point) {
+                    var tooltipX = point.plotX + 20;
+                    var tooltipY = 0;
+
+                    if((labelWidth + point.plotX) > 800) {
+                        tooltipX = (800 - labelWidth + 80);
+                    }
+
+                    return {
+                        x: tooltipX,
+                        y: tooltipY
+                    };
+                }   
+            },
+            plotOptions: { 
+            spline: { 
+                lineWidth: 2,
+                states: {
+                hover: { lineWidth: 3 }
+                },
+                marker: { enabled: true }
+            }
+            },
+            series: [{ name: 'EagleEye621', showInLegend: false, animation: false, color: '#c84329', lineWidth: 2, data: [[1619755200000,800],[1617163200000,1100],[1614488400000,1200],[1612069200000,1700],[1609390800000,1400],[1606712400000,1500],[1604116800000,1400],[1601438400000,3700],[1598846400000,7400],[1596168000000,3300],[1593489600000,1700],[1590897600000,2500],[1588132800000,2600],[1585627200000,2500],[1582952400000,900],[1580446800000,1700],[1577768400000,2600],[1575090000000,6060],[1572494400000,1570],[1569816000000,1200],[1567137600000,1028],[1564372800000,624]] }],
+            navigation: { menuItemStyle: { fontSize: '9px' } }
+        });		 
+
+        Highcharts.chart('graph-youtube-monthly-vidviews-container', {
+            chart: { type: 'spline', zoomType: 'xy', resetZoomButton: { position: { x: 0,  y: -52 } } },
+            credits: { enabled: false },		    
+            title: { text: 'Monthly Gained Video Views for \'EagleEye621\'' },
+            xAxis: {
+                 //type: 'datetime', labels: { overflow: 'justify' }
+                    type: 'datetime',
+                    dateTimeLabelFormats: { // don't display the dummy year
+                        month: '%b %y',
+                        year: '%b'
+                    },
+                    title: {
+                        text: ''
+                    },
+                    events: {
+                        afterSetExtremes: function (e) {
+                            if(e.trigger == "zoom") {
+                                this.chart.update({
+                                    tooltip:
+                                    {
+                                        enabled: true
+                                    }
+                                });
+                            }
+                        }
+                    }                    
+                 },
+            yAxis: { title: { text: 'Video Views' }, minorGridLineWidth: 1, gridLineWidth: 1, alternateGridColor: null, },
+            tooltip: { valueSuffix: ' Video Views', hideDelay: '50',
+                //Highcharts.dateFormat('%e - %b - %Y', new Date(this.x)) + ' date, '
+                formatter: function() {
+                    var dateform = '<span style = "font-size: 5pt;">Month of ' +  Highcharts.dateFormat('%B, %Y', new Date(this.x)) + '</span><br />'
+                    dateform += '<span style="color:#cc2323">●</span> ' + this.series.name +': <b>' + this.y.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') + " Video Views</b>";
+                    return  dateform;
+                },
+                positioner: function(labelWidth, labelHeight, point) {
+                    var tooltipX = point.plotX + 20;
+                    var tooltipY = 0;
+
+                    if((labelWidth + point.plotX) > 800) {
+                        tooltipX = (800 - labelWidth + 80);
+                    }
+
+                    return {
+                        x: tooltipX,
+                        y: tooltipY
+                    };
+                }  
+            },
+            plotOptions: { 
+            spline: { 
+                lineWidth: 2,
+                states: {
+                hover: { lineWidth: 3 }
+                },
+                marker: { enabled: true }
+            }
+            },
+            series: [{ name: 'EagleEye621', showInLegend: false, animation: false, color: '#c84329', lineWidth: 2, data: [[1619755200000,266227],[1617163200000,335868],[1614488400000,366385],[1612069200000,399195],[1609390800000,362684],[1606712400000,354463],[1604116800000,337405],[1601438400000,531532],[1598846400000,783098],[1596168000000,525769],[1593489600000,327046],[1590897600000,411724],[1588132800000,444516],[1585627200000,467591],[1582952400000,197756],[1580446800000,337208],[1577768400000,408782],[1575090000000,735914],[1572494400000,109363],[1569816000000,69097],[1567137600000,54831],[1564372800000,22051]] }],
+            navigation: { menuItemStyle: { fontSize: '9px' } }
+        });	
+
+
+        
+        Highcharts.chart('graph-youtube-weekly-subscribers-container', {
+            chart: { type: 'area', zoomType: '', resetZoomButton: { position: { x: 0,  y: -52 } }, marginBottom : '40' },  
+            credits: { enabled: false },		    
+            title: { text: 'TOTAL SUBSCRIBERS (WEEKLY)', style: { color: '#888888', fontSize: '9pt' }, verticalAlign: 'bottom' },
+            xAxis: {
+                    visible: false,
+                    labels: {
+                            enabled:false
+                    },
+                    type: 'datetime',
+                    dateTimeLabelFormats: { // don't display the dummy year
+                        month: '%b %y',
+                        year: '%b'
+                    },
+                    title: {
+                        text: ''
+                    }
+                 },
+            yAxis: { visible: false, labels: { enabled: false },title: { text: '' }, minorGridLineWidth: 0, gridLineWidth: 0, alternateGridColor: null, },
+            tooltip: { valueSuffix: ' Subscribers', hideDelay: '50', outside: true,
+                //Highcharts.dateFormat('%e - %b - %Y', new Date(this.x)) + ' date, '
+                formatter: function() {
+                    var x_date = this.x;
+                    var last_x_date = this.x - 518400000;
+                    var dateform = '<span style = "font-size: 5pt;">' + Highcharts.dateFormat('%b %e, %Y', new Date(last_x_date)) + ' - ' +  Highcharts.dateFormat('%b %e, %Y', new Date(this.x)) + '</span><br />'
+                    dateform += '<span style="color:#cc2323">●</span> ' + this.series.name +': <b>' + this.y.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') + " Subscribers</b>";
+                    return  dateform;
+                } 
+            },
+            plotOptions: { 
+            spline: { 
+                lineWidth: 2,
+                states: {
+                hover: { lineWidth: 3 }
+                },
+                marker: { enabled: false }
+            }
+            },
+            series: [{ name: 'EagleEye621', showInLegend: false, animation: false, marker: { enabled: false, radius: 3 }, color: '#c84329', lineWidth: 2, data: [[1587009600000,400],[1587614400000,600],[1588305600000,1100],[1588996800000,900],[1589774400000,700],[1590379200000,400],[1591070400000,400],[1591675200000,200],[1592366400000,500],[1593230400000,600],[1593835200000,800],[1594440000000,800],[1595044800000,600],[1595649600000,600],[1596254400000,1000],[1596859200000,2500],[1597464000000,1900],[1598155200000,1200],[1598760000000,1300],[1599364800000,2100],[1600056000000,1100],[1600747200000,500],[1601352000000,300],[1601956800000,100],[1602561600000,300],[1603166400000,400],[1603771200000,400],[1604379600000,400],[1604984400000,400],[1605589200000,300],[1606366800000,400],[1607058000000,300],[1607662800000,300],[1608267600000,300],[1608872400000,400],[1609477200000,400],[1610082000000,400],[1610686800000,400],[1611291600000,300],[1611896400000,400],[1612501200000,300],[1613106000000,300],[1613797200000,400],[1614402000000,300],[1615006800000,200],[1615611600000,300],[1616472000000,300],[1617336000000,400],[1617940800000,200],[1618545600000,100],[1619150400000,100],[1620014400000,300],[1620619200000,200]] }],
+            navigation: { menuItemStyle: { fontSize: '9px' } }
+        });		 
+
+        Highcharts.chart('graph-youtube-weekly-vidviews-container', {
+            chart: { type: 'area', zoomType: '', resetZoomButton: { position: { x: 0,  y: -52 } }, marginBottom : '40' },
+            credits: { enabled: false },		    
+            title: { text: 'TOTAL VIDEO VIEWS (WEEKLY)', style: { color: '#888888', fontSize: '9pt' }, verticalAlign: 'bottom' },
+            xAxis: {
+                    visible: false,
+                    type: 'datetime',
+                    dateTimeLabelFormats: { // don't display the dummy year
+                        month: '%b %y',
+                        year: '%b'
+                    },
+                    title: {
+                        text: ''
+                    }               
+                 },
+            yAxis: { visible: false, title: { text: 'Video Views' }, minorGridLineWidth: 1, gridLineWidth: 1, alternateGridColor: null, },
+            tooltip: { valueSuffix: ' Video Views', hideDelay: '50', outside: true,
+                //Highcharts.dateFormat('%e - %b - %Y', new Date(this.x)) + ' date, '
+                formatter: function() {
+                    var x_date = this.x;
+                    var last_x_date = this.x - 518400000;
+                    var dateform = '<span style = "font-size: 5pt;">' + Highcharts.dateFormat('%b %e, %Y', new Date(last_x_date)) + ' - ' +  Highcharts.dateFormat('%b %e, %Y', new Date(this.x)) + '</span><br />'
+                    dateform += '<span style="color:#cc2323">●</span> ' + this.series.name +': <b>' + this.y.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,') + " Video Views</b>";
+                    return  dateform;
+                }
+            },
+            plotOptions: { 
+            spline: { 
+                lineWidth: 2,
+                states: {
+                hover: { lineWidth: 3 }
+                },
+                marker: { enabled: false }
+            }
+            },
+            series: [{ name: 'EagleEye621', showInLegend: false, animation: false, marker: { enabled: false, radius: 3 }, color: '#c84329', lineWidth: 2, data: [[1587009600000,103818],[1587614400000,104446],[1588305600000,123911],[1588996800000,139360],[1589774400000,113122],[1590379200000,76221],[1591070400000,73759],[1591675200000,56145],[1592366400000,77697],[1593230400000,128850],[1593835200000,124525],[1594440000000,129565],[1595044800000,112592],[1595649600000,103135],[1596254400000,128135],[1596859200000,213706],[1597464000000,207343],[1598155200000,158561],[1598760000000,152510],[1599364800000,241003],[1600056000000,148017],[1600747200000,94242],[1601352000000,65639],[1601956800000,66326],[1602561600000,68758],[1603166400000,75946],[1603771200000,84136],[1604379600000,87932],[1604984400000,87119],[1605589200000,84025],[1606366800000,107572],[1607058000000,85303],[1607662800000,78671],[1608267600000,75411],[1608872400000,90328],[1609477200000,84127],[1610082000000,89213],[1610686800000,90299],[1611291600000,83023],[1611896400000,95197],[1612501200000,99032],[1613106000000,85766],[1613797200000,110790],[1614402000000,88394],[1615006800000,76038],[1615611600000,88098],[1616472000000,104140],[1617336000000,97457],[1617940800000,71878],[1618545600000,63779],[1619150400000,59703],[1620014400000,76523],[1620619200000,45024]] }],
+            navigation: { menuItemStyle: { fontSize: '9px' } }
+        });	                
+    });
+    </script>
+    <div style="width: 860px; background: #333; padding: 20px; text-transform: uppercase; color:#fff; margin-top: 30px; ">
+     <h2 style="font-size: 10pt;">
+      YouTube Analytical History for EagleEye621
+     </h2>
+    </div>
+    <div style="width: 890px; padding: 15px 10px 15px 5px; background: #fff; float: left; margin: 0px 0px 10px 0px; ">
+     <div data-highcharts-chart="1" id="graph-youtube-monthly-vidviews-container" style="min-width: 800px; height: 250px; margin: 10px auto; overflow: hidden;">
+      <div class="highcharts-container" dir="ltr" id="highcharts-g0cons8-25" style="position: relative; overflow: hidden; width: 890px; height: 250px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; touch-action: manipulation; outline: none;">
+       <svg class="highcharts-root" height="250" style='font-family:"Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;font-size:12px;' version="1.1" viewbox="0 0 890 250" width="890" xmlns="http://www.w3.org/2000/svg">
+        <desc>
+         Created with Highcharts 9.1.0
+        </desc>
+        <defs>
+         <clippath id="highcharts-g0cons8-26-">
+          <rect fill="none" height="170" width="797" x="0" y="0">
+          </rect>
+         </clippath>
+        </defs>
+        <rect class="highcharts-background" fill="#ffffff" height="250" rx="0" ry="0" width="890" x="0" y="0">
+        </rect>
+        <rect class="highcharts-plot-background" fill="none" height="170" width="797" x="83" y="45">
+        </rect>
+        <g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1">
+         <path class="highcharts-grid-line" d="M 168.5 45 L 168.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+         <path class="highcharts-grid-line" d="M 280.5 45 L 280.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+         <path class="highcharts-grid-line" d="M 391.5 45 L 391.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+         <path class="highcharts-grid-line" d="M 502.5 45 L 502.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+         <path class="highcharts-grid-line" d="M 614.5 45 L 614.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+         <path class="highcharts-grid-line" d="M 726.5 45 L 726.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+         <path class="highcharts-grid-line" d="M 836.5 45 L 836.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+        </g>
+        <g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1">
+         <path class="highcharts-grid-line" d="M 83 215.5 L 880 215.5" data-z-index="1" fill="none" opacity="1" stroke="#e6e6e6" stroke-dasharray="none" stroke-width="1">
+         </path>
+         <path class="highcharts-grid-line" d="M 83 173.5 L 880 173.5" data-z-index="1" fill="none" opacity="1" stroke="#e6e6e6" stroke-dasharray="none" stroke-width="1">
+         </path>
+         <path class="highcharts-grid-line" d="M 83 130.5 L 880 130.5" data-z-index="1" fill="none" opacity="1" stroke="#e6e6e6" stroke-dasharray="none" stroke-width="1">
+         </path>
+         <path class="highcharts-grid-line" d="M 83 87.5 L 880 87.5" data-z-index="1" fill="none" opacity="1" stroke="#e6e6e6" stroke-dasharray="none" stroke-width="1">
+         </path>
+         <path class="highcharts-grid-line" d="M 83 44.5 L 880 44.5" data-z-index="1" fill="none" opacity="1" stroke="#e6e6e6" stroke-dasharray="none" stroke-width="1">
+         </path>
+        </g>
+        <rect class="highcharts-plot-border" data-z-index="1" fill="none" height="170" width="797" x="83" y="45">
+        </rect>
+        <g class="highcharts-axis highcharts-xaxis" data-z-index="2">
+         <path class="highcharts-tick" d="M 168.5 215 L 168.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-tick" d="M 280.5 215 L 280.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-tick" d="M 391.5 215 L 391.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-tick" d="M 502.5 215 L 502.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-tick" d="M 614.5 215 L 614.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-tick" d="M 726.5 215 L 726.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-tick" d="M 836.5 215 L 836.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-axis-line" d="M 83 215.5 L 880 215.5" data-z-index="7" fill="none" stroke="#ccd6eb" stroke-width="1">
+         </path>
+        </g>
+        <g class="highcharts-axis highcharts-yaxis" data-z-index="2">
+         <text class="highcharts-axis-title" data-z-index="7" style="color:#666666;fill:#666666;" text-anchor="middle" transform="translate(0,0) rotate(270 24.46875 130)" x="24.46875" y="130">
+          Video Views
+         </text>
+         <path class="highcharts-axis-line" d="M 83 45 L 83 215" data-z-index="7" fill="none">
+         </path>
+        </g>
+        <g class="highcharts-series-group" data-z-index="3">
+         <g class="highcharts-series highcharts-series-0 highcharts-spline-series" clip-path="url(#highcharts-g0cons8-26-)" data-z-index="0.1" opacity="1" transform="translate(83,45) scale(1 1)">
+          <path class="highcharts-graph" d="M 789.1862745098 124.74141 C 789.1862745098 124.74141 767.244455660576 116.25427573479159 752.61657642776 112.90244 C 737.521417719452 109.4435317347916 729.973838365298 109.97570430954072 714.87867965699 107.71455 C 701.2259923730301 105.6694683095407 694.39964873105 102.13685 680.74696144709 102.13685 C 665.631486239846 102.13685 658.073748636224 106.94614999999999 642.95827342898 108.34371999999999 C 627.842798221736 109.74128999999999 620.285060618114 108.86831036313994 605.16958541087 109.74128999999999 C 590.521389679118 110.58728236313995 583.197291813242 112.64115 568.54909608149 112.64115 C 553.433620874246 112.64115 545.8758832706241 95.04154104918072 530.76040806338 79.63955999999999 C 516.1325288305641 64.73441704918072 508.8185892141561 36.873339999999985 494.19070998134 36.873339999999985 C 479.075234774096 36.873339999999985 471.51749717047403 65.11350200000001 456.40202196323 80.61927 C 441.286546755986 96.125038 433.728809152364 114.40217999999999 418.61333394512 114.40217999999999 C 403.985454712304 114.40217999999999 396.67151509589604 103.87206193548366 382.04363586308 100.00692 C 366.440564681408 95.88410193548366 358.639029090572 96.42517495081982 343.0359579089 94.43227999999999 C 328.89567465051203 92.62621895081982 321.825533021318 90.50953 307.68524976293 90.50953 C 292.590091054622 90.50953 285.042511700468 136.38148 269.94735299216 136.38148 C 255.807069733772 136.38148 248.736928104578 119.6103611999996 234.59664484619 112.67464 C 219.481169638946 105.26059319999959 211.923432035324 112.67464 196.80795682808 100.50706 C 181.692481620836 88.33948 174.13474401721402 44.89461999999999 159.01926880997 44.89461999999999 C 144.371073078218 44.89461999999999 137.04697521234198 144.56306999999998 122.39877948059 151.40829 C 107.28330427334679 158.25351 99.72556666972521 156.39942200000004 84.610091462482 158.25351 C 69.49461625523841 160.10759800000002 61.936878651616595 159.1045559047619 46.821403444373 160.67873 C 31.21833226270224 162.3036839047619 7.8137254901961 166.25133 7.8137254901961 166.25133" data-z-index="1" fill="none" stroke="#c84329" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          </path>
+          <path class="highcharts-tracker-line" d="M 789.1862745098 124.74141 C 789.1862745098 124.74141 767.244455660576 116.25427573479159 752.61657642776 112.90244 C 737.521417719452 109.4435317347916 729.973838365298 109.97570430954072 714.87867965699 107.71455 C 701.2259923730301 105.6694683095407 694.39964873105 102.13685 680.74696144709 102.13685 C 665.631486239846 102.13685 658.073748636224 106.94614999999999 642.95827342898 108.34371999999999 C 627.842798221736 109.74128999999999 620.285060618114 108.86831036313994 605.16958541087 109.74128999999999 C 590.521389679118 110.58728236313995 583.197291813242 112.64115 568.54909608149 112.64115 C 553.433620874246 112.64115 545.8758832706241 95.04154104918072 530.76040806338 79.63955999999999 C 516.1325288305641 64.73441704918072 508.8185892141561 36.873339999999985 494.19070998134 36.873339999999985 C 479.075234774096 36.873339999999985 471.51749717047403 65.11350200000001 456.40202196323 80.61927 C 441.286546755986 96.125038 433.728809152364 114.40217999999999 418.61333394512 114.40217999999999 C 403.985454712304 114.40217999999999 396.67151509589604 103.87206193548366 382.04363586308 100.00692 C 366.440564681408 95.88410193548366 358.639029090572 96.42517495081982 343.0359579089 94.43227999999999 C 328.89567465051203 92.62621895081982 321.825533021318 90.50953 307.68524976293 90.50953 C 292.590091054622 90.50953 285.042511700468 136.38148 269.94735299216 136.38148 C 255.807069733772 136.38148 248.736928104578 119.6103611999996 234.59664484619 112.67464 C 219.481169638946 105.26059319999959 211.923432035324 112.67464 196.80795682808 100.50706 C 181.692481620836 88.33948 174.13474401721402 44.89461999999999 159.01926880997 44.89461999999999 C 144.371073078218 44.89461999999999 137.04697521234198 144.56306999999998 122.39877948059 151.40829 C 107.28330427334679 158.25351 99.72556666972521 156.39942200000004 84.610091462482 158.25351 C 69.49461625523841 160.10759800000002 61.936878651616595 159.1045559047619 46.821403444373 160.67873 C 31.21833226270224 162.3036839047619 7.8137254901961 166.25133 7.8137254901961 166.25133" data-z-index="2" fill="none" stroke="rgba(192,192,192,0.0001)" stroke-linecap="round" stroke-linejoin="round" stroke-width="22" visibility="visible">
+          </path>
+         </g>
+         <g class="highcharts-markers highcharts-series-0 highcharts-spline-series highcharts-tracker" clip-path="none" data-z-index="0.1" opacity="1" transform="translate(83,45) scale(1 1)">
+          <path class="highcharts-point" d="M 789 129 A 4 4 0 1 1 789.0039999993334 128.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 752 117 A 4 4 0 1 1 752.0039999993334 116.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 714 112 A 4 4 0 1 1 714.0039999993334 111.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 680 106 A 4 4 0 1 1 680.0039999993334 105.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 642 112 A 4 4 0 1 1 642.0039999993334 111.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 605 114 A 4 4 0 1 1 605.0039999993334 113.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 568 117 A 4 4 0 1 1 568.0039999993334 116.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 530 84 A 4 4 0 1 1 530.0039999993334 83.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 494 41 A 4 4 0 1 1 494.00399999933336 40.99999800000017 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 456 85 A 4 4 0 1 1 456.00399999933336 84.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 418 118 A 4 4 0 1 1 418.00399999933336 117.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 382 104 A 4 4 0 1 1 382.00399999933336 103.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 343 98 A 4 4 0 1 1 343.00399999933336 97.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 307 95 A 4 4 0 1 1 307.00399999933336 94.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 269 140 A 4 4 0 1 1 269.00399999933336 139.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 234 117 A 4 4 0 1 1 234.00399999933333 116.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 196 105 A 4 4 0 1 1 196.00399999933333 104.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 159 49 A 4 4 0 1 1 159.00399999933333 48.99999800000017 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 122 155 A 4 4 0 1 1 122.00399999933333 154.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 84 162 A 4 4 0 1 1 84.00399999933333 161.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 46 165 A 4 4 0 1 1 46.00399999933334 164.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 7 170 A 4 4 0 1 1 7.0039999993333355 169.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+         </g>
+        </g>
+        <text class="highcharts-title" data-z-index="4" style="color:#333333;font-size:18px;fill:#333333;" text-anchor="middle" x="445" y="24">
+         Monthly Gained Video Views for 'EagleEye621'
+        </text>
+        <text class="highcharts-subtitle" data-z-index="4" style="color:#666666;fill:#666666;" text-anchor="middle" x="445" y="44">
+        </text>
+        <text class="highcharts-caption" data-z-index="4" style="color:#666666;fill:#666666;" text-anchor="start" x="10" y="247">
+        </text>
+        <g class="highcharts-legend" data-z-index="7">
+         <rect class="highcharts-legend-box" fill="none" height="8" rx="0" ry="0" visibility="hidden" width="8" x="0" y="0">
+         </rect>
+         <g data-z-index="1">
+          <g>
+          </g>
+         </g>
+        </g>
+        <g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7">
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="168.62591640921" y="234">
+          Oct 19
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="280.77299052746" y="234">
+          Jan 20
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="391.70107470966" y="234">
+          Apr 20
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="502.62915889185" y="234">
+          Jul 20
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="614.7762330101" y="234">
+          Oct 20
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="726.92330712836" y="234">
+          Jan 21
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="836.63240137449" y="234">
+          Apr 21
+         </text>
+        </g>
+        <g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7">
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" x="68" y="220">
+          0
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" x="68" y="178">
+          250k
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" x="68" y="135">
+          500k
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" x="68" y="93">
+          750k
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" x="68" y="50">
+          1 000k
+         </text>
+        </g>
+       </svg>
+      </div>
+     </div>
+     <div data-highcharts-chart="0" id="graph-youtube-monthly-subscribers-container" style="min-width: 800px; height: 250px; margin: 10px auto; overflow: hidden;">
+      <div class="highcharts-container" dir="ltr" id="highcharts-g0cons8-0" style="position: relative; overflow: hidden; width: 890px; height: 250px; text-align: left; line-height: normal; z-index: 0; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); user-select: none; touch-action: manipulation; outline: none;">
+       <svg class="highcharts-root" height="250" style='font-family:"Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, sans-serif;font-size:12px;' version="1.1" viewbox="0 0 890 250" width="890" xmlns="http://www.w3.org/2000/svg">
+        <desc>
+         Created with Highcharts 9.1.0
+        </desc>
+        <defs>
+         <clippath id="highcharts-g0cons8-1-">
+          <rect fill="none" height="170" width="810" x="0" y="0">
+          </rect>
+         </clippath>
+        </defs>
+        <rect class="highcharts-background" fill="#ffffff" height="250" rx="0" ry="0" width="890" x="0" y="0">
+        </rect>
+        <rect class="highcharts-plot-background" fill="none" height="170" width="810" x="70" y="45">
+        </rect>
+        <g class="highcharts-grid highcharts-xaxis-grid" data-z-index="1">
+         <path class="highcharts-grid-line" d="M 156.5 45 L 156.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+         <path class="highcharts-grid-line" d="M 270.5 45 L 270.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+         <path class="highcharts-grid-line" d="M 383.5 45 L 383.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+         <path class="highcharts-grid-line" d="M 495.5 45 L 495.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+         <path class="highcharts-grid-line" d="M 609.5 45 L 609.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+         <path class="highcharts-grid-line" d="M 723.5 45 L 723.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+         <path class="highcharts-grid-line" d="M 835.5 45 L 835.5 215" data-z-index="1" fill="none" opacity="1" stroke-dasharray="none">
+         </path>
+        </g>
+        <g class="highcharts-grid highcharts-yaxis-grid" data-z-index="1">
+         <path class="highcharts-grid-line" d="M 70 215.5 L 880 215.5" data-z-index="1" fill="none" opacity="1" stroke="#e6e6e6" stroke-dasharray="none" stroke-width="1">
+         </path>
+         <path class="highcharts-grid-line" d="M 70 173.5 L 880 173.5" data-z-index="1" fill="none" opacity="1" stroke="#e6e6e6" stroke-dasharray="none" stroke-width="1">
+         </path>
+         <path class="highcharts-grid-line" d="M 70 130.5 L 880 130.5" data-z-index="1" fill="none" opacity="1" stroke="#e6e6e6" stroke-dasharray="none" stroke-width="1">
+         </path>
+         <path class="highcharts-grid-line" d="M 70 87.5 L 880 87.5" data-z-index="1" fill="none" opacity="1" stroke="#e6e6e6" stroke-dasharray="none" stroke-width="1">
+         </path>
+         <path class="highcharts-grid-line" d="M 70 44.5 L 880 44.5" data-z-index="1" fill="none" opacity="1" stroke="#e6e6e6" stroke-dasharray="none" stroke-width="1">
+         </path>
+        </g>
+        <rect class="highcharts-plot-border" data-z-index="1" fill="none" height="170" width="810" x="70" y="45">
+        </rect>
+        <g class="highcharts-axis highcharts-xaxis" data-z-index="2">
+         <path class="highcharts-tick" d="M 156.5 215 L 156.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-tick" d="M 270.5 215 L 270.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-tick" d="M 383.5 215 L 383.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-tick" d="M 495.5 215 L 495.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-tick" d="M 609.5 215 L 609.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-tick" d="M 723.5 215 L 723.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-tick" d="M 835.5 215 L 835.5 225" fill="none" opacity="1" stroke="#ccd6eb" stroke-width="1">
+         </path>
+         <path class="highcharts-axis-line" d="M 70 215.5 L 880 215.5" data-z-index="7" fill="none" stroke="#ccd6eb" stroke-width="1">
+         </path>
+        </g>
+        <g class="highcharts-axis highcharts-yaxis" data-z-index="2">
+         <text class="highcharts-axis-title" data-z-index="7" style="color:#666666;fill:#666666;" text-anchor="middle" transform="translate(0,0) rotate(270 23.703125 130)" x="23.703125" y="130">
+          Subscribers
+         </text>
+         <path class="highcharts-axis-line" d="M 70 45 L 70 215" data-z-index="7" fill="none">
+         </path>
+        </g>
+        <g class="highcharts-series-group" data-z-index="3">
+         <g class="highcharts-series highcharts-series-0 highcharts-spline-series" clip-path="url(#highcharts-g0cons8-1-)" data-z-index="0.1" opacity="1" transform="translate(70,45) scale(1 1)">
+          <path class="highcharts-graph" d="M 802.05882352941 156.4 C 802.05882352941 156.4 779.75910801138 152.63861927546134 764.89263099936 151.3 C 749.551252638344 149.91861927546134 741.880563457836 151.3 726.53918509682 149.6 C 712.6638065522641 147.89999999999998 705.7261172799859 141.1 691.85073873543 141.1 C 676.488712489674 141.1 668.8076993667961 146.2 653.44567312104 146.2 C 638.083646875284 146.2 630.402633752406 144.5 615.04060750665 144.5 C 600.1534826098899 144.5 592.7099201615099 146.2 577.82279526475 146.2 C 562.4607690189939 146.2 554.779755896116 127.83442622950946 539.41772965036 107.1 C 524.55125263834 87.03442622950946 517.11801413233 44.19999999999999 502.25153712031 44.19999999999999 C 486.88951087455405 44.19999999999999 479.2084977516761 94.51999999999997 463.84647150592 113.9 C 448.484445260164 133.27999999999997 440.803432137286 141.1 425.44140589153 141.1 C 410.57492887951 141.1 403.1416903735 129.2 388.27521336148 127.5 C 372.417637881988 125.8 364.488850142242 125.8 348.63127466275 125.8 C 334.26034688446197 125.8 327.07488299531803 125.8 312.70395521703 127.5 C 297.362576856014 129.2 289.69188767550605 154.7 274.35050931449 154.7 C 259.97958153620203 154.7 252.79411764705802 146.68733333333336 238.42318986877 141.1 C 223.061163623014 135.12733333333335 215.380150500136 140.62399999999997 200.01812425438 125.8 C 184.65609800862399 110.97599999999998 176.97508488574599 66.97999999999999 161.61305863999 66.97999999999999 C 146.72593374323 66.97999999999999 139.28237129485 137.02 124.39524639809 143.31 C 109.03322015233479 149.6 101.3522070294572 147.7572 85.990180783702 149.6 C 70.6281545379464 151.4428 62.94714141506861 150.59668571428574 47.585115169313 152.524 C 31.727539689823082 154.51348571428574 7.9411764705882 159.392 7.9411764705882 159.392" data-z-index="1" fill="none" stroke="#c84329" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          </path>
+          <path class="highcharts-tracker-line" d="M 802.05882352941 156.4 C 802.05882352941 156.4 779.75910801138 152.63861927546134 764.89263099936 151.3 C 749.551252638344 149.91861927546134 741.880563457836 151.3 726.53918509682 149.6 C 712.6638065522641 147.89999999999998 705.7261172799859 141.1 691.85073873543 141.1 C 676.488712489674 141.1 668.8076993667961 146.2 653.44567312104 146.2 C 638.083646875284 146.2 630.402633752406 144.5 615.04060750665 144.5 C 600.1534826098899 144.5 592.7099201615099 146.2 577.82279526475 146.2 C 562.4607690189939 146.2 554.779755896116 127.83442622950946 539.41772965036 107.1 C 524.55125263834 87.03442622950946 517.11801413233 44.19999999999999 502.25153712031 44.19999999999999 C 486.88951087455405 44.19999999999999 479.2084977516761 94.51999999999997 463.84647150592 113.9 C 448.484445260164 133.27999999999997 440.803432137286 141.1 425.44140589153 141.1 C 410.57492887951 141.1 403.1416903735 129.2 388.27521336148 127.5 C 372.417637881988 125.8 364.488850142242 125.8 348.63127466275 125.8 C 334.26034688446197 125.8 327.07488299531803 125.8 312.70395521703 127.5 C 297.362576856014 129.2 289.69188767550605 154.7 274.35050931449 154.7 C 259.97958153620203 154.7 252.79411764705802 146.68733333333336 238.42318986877 141.1 C 223.061163623014 135.12733333333335 215.380150500136 140.62399999999997 200.01812425438 125.8 C 184.65609800862399 110.97599999999998 176.97508488574599 66.97999999999999 161.61305863999 66.97999999999999 C 146.72593374323 66.97999999999999 139.28237129485 137.02 124.39524639809 143.31 C 109.03322015233479 149.6 101.3522070294572 147.7572 85.990180783702 149.6 C 70.6281545379464 151.4428 62.94714141506861 150.59668571428574 47.585115169313 152.524 C 31.727539689823082 154.51348571428574 7.9411764705882 159.392 7.9411764705882 159.392" data-z-index="2" fill="none" stroke="rgba(192,192,192,0.0001)" stroke-linecap="round" stroke-linejoin="round" stroke-width="22" visibility="visible">
+          </path>
+         </g>
+         <g class="highcharts-markers highcharts-series-0 highcharts-spline-series highcharts-tracker" clip-path="none" data-z-index="0.1" opacity="1" transform="translate(70,45) scale(1 1)">
+          <path class="highcharts-point" d="M 802 160 A 4 4 0 1 1 802.0039999993334 159.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 764 155 A 4 4 0 1 1 764.0039999993334 154.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 726 154 A 4 4 0 1 1 726.0039999993334 153.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 691 145 A 4 4 0 1 1 691.0039999993334 144.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 653 150 A 4 4 0 1 1 653.0039999993334 149.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 615 149 A 4 4 0 1 1 615.0039999993334 148.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 577 150 A 4 4 0 1 1 577.0039999993334 149.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 539 111 A 4 4 0 1 1 539.0039999993334 110.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 502 48 A 4 4 0 1 1 502.00399999933336 47.99999800000017 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 463 118 A 4 4 0 1 1 463.00399999933336 117.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 425 145 A 4 4 0 1 1 425.00399999933336 144.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 388 132 A 4 4 0 1 1 388.00399999933336 131.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 348 130 A 4 4 0 1 1 348.00399999933336 129.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 312 132 A 4 4 0 1 1 312.00399999933336 131.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 274 159 A 4 4 0 1 1 274.00399999933336 158.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 238 145 A 4 4 0 1 1 238.00399999933333 144.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 200 130 A 4 4 0 1 1 200.00399999933333 129.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 161 71 A 4 4 0 1 1 161.00399999933333 70.99999800000016 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 124 147 A 4 4 0 1 1 124.00399999933333 146.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 85 154 A 4 4 0 1 1 85.00399999933333 153.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 47 157 A 4 4 0 1 1 47.00399999933334 156.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+          <path class="highcharts-point" d="M 7 163 A 4 4 0 1 1 7.0039999993333355 162.99999800000018 Z" fill="#c84329" opacity="1">
+          </path>
+         </g>
+        </g>
+        <text class="highcharts-title" data-z-index="4" style="color:#333333;font-size:18px;fill:#333333;" text-anchor="middle" x="445" y="24">
+         Monthly Gained Subscribers for 'EagleEye621'
+        </text>
+        <text class="highcharts-subtitle" data-z-index="4" style="color:#666666;fill:#666666;" text-anchor="middle" x="445" y="44">
+        </text>
+        <text class="highcharts-caption" data-z-index="4" style="color:#666666;fill:#666666;" text-anchor="start" x="10" y="247">
+        </text>
+        <g class="highcharts-legend" data-z-index="7">
+         <rect class="highcharts-legend-box" fill="none" height="8" rx="0" ry="0" visibility="hidden" width="8" x="0" y="0">
+         </rect>
+         <g data-z-index="1">
+          <g>
+          </g>
+         </g>
+        </g>
+        <g class="highcharts-axis-labels highcharts-xaxis-labels" data-z-index="7">
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="157.02257502065" y="234">
+          Oct 19
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="270.99889877948" y="234">
+          Jan 20
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="383.73634945398" y="234">
+          Apr 20
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="496.47380012848" y="234">
+          Jul 20
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="610.45012388731" y="234">
+          Oct 20
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="724.42644764614" y="234">
+          Jan 21
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="middle" transform="translate(0,0)" x="835.9250252363" y="234">
+          Apr 21
+         </text>
+        </g>
+        <g class="highcharts-axis-labels highcharts-yaxis-labels" data-z-index="7">
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" x="55" y="220">
+          0
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" x="55" y="178">
+          2.5k
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" x="55" y="135">
+          5k
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" x="55" y="93">
+          7.5k
+         </text>
+         <text opacity="1" style="color:#666666;cursor:default;font-size:11px;fill:#666666;" text-anchor="end" transform="translate(0,0)" x="55" y="50">
+          10k
+         </text>
+        </g>
+       </svg>
+      </div>
+     </div>
+    </div>
+    <div style="clear: both;">
+    </div>
+   </div>
+   <div id="socialblade-user-sidebar">
+    <div style="width: 340px; float: left;">
+     <div style="width: 300px; background: #333; padding: 14px 20px; color:#fff; font-size: 9pt; text-transform: uppercase; font-weight: bold;">
+      Users Recent Video
+     </div>
+     <div class="youtube-video-embed-recent" id="7Wccea2ZtaY" style="width: 340px; height: 191px; background: #ccc; position: relative; cursor: pointer; margin-bottom: 20px; ">
+      <img src="https://i.ytimg.com/vi/7Wccea2ZtaY/mqdefault.jpg" style="width: 340px; height: 191px; position: absolute;"/>
+      <div style="width: 340px; height: 191px; position: absolute;">
+       <i class="fa fa-play youtube-video-embed-play-button" style="margin-left: 138px; margin-top: 75px; color:#fff; padding: 10px 20px; background: #cc3333; border-radius: 8px; opacity: 0.8; alpha(opacity=80);">
+       </i>
+      </div>
+     </div>
+     <div style="width: 300px; height: 250px; padding: 20px; background: #fff; margin-bottom: 20px; ">
+      <div style="width: 299px; margin: 1px auto 11px auto;">
+       <div>
+        <div id="cdm-zone-02">
+        </div>
+       </div>
+       <div class="socialblade-heartbeat" style="display: none;">
+        <div style="width: 297px; height: 248px; background: #d37a74; border: 2px solid #b3382c; text-align: center;">
+         <i class="fa fa-exclamation-triangle fa-5x" style="margin-top: 20px; color:#fff;">
+         </i>
+         <div style="margin: 0px auto; width: 80%; color:#fff; margin-top: 10px; font-size: 10pt; line-height: 1.5em;">
+          Hello, visitor! Please consider adding SocialBlade.com to your adblock whitelist. Our ads support the development and upkeep of the site. Upgrade to a
+          <a href="/products/subscription" style="color:#fff;">
+           Premium Subscription
+          </a>
+          to load the site without ads.
+         </div>
+        </div>
+        <div style="clear: both;">
+        </div>
+       </div>
+      </div>
+     </div>
+     <div style="width: 300px; background: #333; padding: 14px 20px; color:#fff; font-size: 9pt; text-transform: uppercase; font-weight: bold;">
+      Featured Video
+     </div>
+     <div class="youtube-video-embed" id="jX1TQtxHDP8" style="width: 340px; height: 191px; background: #ccc; position: relative; cursor: pointer;">
+      <img id="UCl6vWwMCjufI8OPtOInHf0g" src="https://i.ytimg.com/vi/jX1TQtxHDP8/mqdefault.jpg" style="width: 340px; height: 191px; position: absolute;"/>
+      <div style="width: 340px; height: 191px; position: absolute;">
+       <i class="fa fa-play youtube-video-embed-play-button" style="margin-left: 138px; margin-top: 75px; color:#fff; padding: 10px 20px; background: #cc3333; border-radius: 8px; opacity: 0.8; alpha(opacity=80);">
+       </i>
+      </div>
+     </div>
+     <div style="width: 300px; height: 250px; background: #263238; color:#fff; padding: 10px 20px; font-size: 9pt; margin-top: 20px; text-align: center; position: relative;">
+      <h3 style="padding-top: 40px; font-weight: bold; font-size: 2.5em;">
+       EagleEye621
+      </h3>
+      <p style="line-height: 1.5em; font-size: 0.9em;">
+       should reach
+      </p>
+      <h5 style="line-height: 2.5em; font-size: 2.5em;">
+       48.8K Subs
+      </h5>
+      <p>
+       around tomorrow*
+      </p>
+      <p style="position: absolute; bottom: 0; right: 5px; font-size: 0.9em; opacity: 0.5;">
+       * rough estimate based on current trend
+      </p>
+     </div>
+     <div style="width: 300px; margin-top: 20px; background: #333; padding: 14px 20px; font-size: 9pt; text-transform: uppercase; color:#fff; font-weight: bold;">
+      Network Video
+     </div>
+     <div class="youtube-video-embed-network" id="RdqbDzldRVQ" style="width: 340px; height: 191px; background: #ccc; position: relative; cursor: pointer;">
+      <img id="UCO47M_-KfL_gIWmxQi72Yzw" src="https://i.ytimg.com/vi/RdqbDzldRVQ/mqdefault.jpg" style="width: 340px; height: 191px; position: absolute;"/>
+      <div style="width: 340px; height: 191px; position: absolute;">
+       <i class="fa fa-play youtube-video-embed-play-button" style="margin-left: 138px; margin-top: 75px; color:#fff; padding: 10px 20px; background: #cc3333; border-radius: 8px; opacity: 0.8; alpha(opacity=80);">
+       </i>
+      </div>
+     </div>
+     <div style="clear: both;">
+     </div>
+     <div style="width: 300px; margin-top: 20px; background: #263238; padding: 20px; color:#90CAF9; text-transform: uppercase; font-size: 9pt; font-weight: bold;">
+      Recent Blog Posts
+     </div>
+     <div style="width: 340px; background: #263238; font-size: 8pt;">
+      <a class="anchor-sidebar" href="https://socialblade.com/blog/made-for-kids-initial-look-at-the-data/" style="width: 320px; padding: 2px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" target="_blank">
+       Made For Kids &amp; COPPA - Initial Look At The Yo…
+      </a>
+      <a class="anchor-sidebar" href="https://socialblade.com/blog/the-social-blade-decade/" style="width: 320px; padding: 2px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" target="_blank">
+       The Social Blade Decade
+      </a>
+      <a class="anchor-sidebar" href="https://socialblade.com/blog/abbreviated-subscriber-counts-on-youtube/" style="width: 320px; padding: 2px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" target="_blank">
+       Abbreviated Subscriber Counts on YouTube
+      </a>
+      <a class="anchor-sidebar" href="https://socialblade.com/blog/social-blade-launches-report-cards-youtube/" style="width: 320px; padding: 2px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" target="_blank">
+       Social Blade launches Report Cards for YouTube
+      </a>
+      <a class="anchor-sidebar" href="https://socialblade.com/blog/instagram-opens-highly-coveted-verification-form-to-the-public/" style="width: 320px; padding: 2px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" target="_blank">
+       Instagram opens highly-coveted verification fo…
+      </a>
+      <a class="anchor-sidebar" href="https://socialblade.com/blog/youtube-premium-debut-50-original-shows-2019/" style="width: 320px; padding: 2px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" target="_blank">
+       YouTube Premium to debut 50 original shows in …
+      </a>
+      <a class="anchor-sidebar" href="https://socialblade.com/blog/youtube-music-inks-partnership-american-music-awards-amas/" style="width: 320px; padding: 2px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" target="_blank">
+       YouTube Music inks partnership with American M…
+      </a>
+      <a class="anchor-sidebar" href="https://socialblade.com/blog/netflix-testing-ads-recommendations-viewing-sessions/" style="width: 320px; padding: 2px 10px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;" target="_blank">
+       Netflix testing ads-that-aren't-really-ads dur…
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <div style="width: 860px; min-height: 90px; height: auto; padding: 20px; background: #fff; float: left; margin: 0px 0px 10px 0px;">
+   <div style="width: 728px; height: auto; min-height: 90px; margin: 0px auto;">
+    <div style="width: 730px; margin: 0px auto 9px auto;">
+     <div>
+      <div id="cdm-zone-04">
+      </div>
+     </div>
+     <div class="socialblade-heartbeat" style="display: none;">
+      <div style="width: 726px; height: 88px; background: #d37a74; border: 2px solid #b3382c;">
+       <i class="fa fa-exclamation-triangle fa-5x" style="margin: 12px 30px; width: 60px; color: #fff; float: left;">
+       </i>
+       <div style="margin: 0px auto; width: 90%; color:#fff; margin-top: 15px; font-size: 10pt; line-height: 1.5em;">
+        Hello, visitor! Please consider adding SocialBlade.com to your adblock whitelist. Our ads support the development and upkeep of the site. Upgrade to a
+        <a href="/products/subscription" style="color:#fff;">
+         Premium Subscription
+        </a>
+        to load the site without ads.
+       </div>
+      </div>
+      <div style="clear: both;">
+      </div>
+     </div>
+    </div>
+   </div>
+   <div style="clear: both;">
+   </div>
+  </div>
+  <div style="clear: both;">
+  </div>
+  <!-- Start Quantcast tag -->
+  <script src="//edge.quantserve.com/quant.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   _qacct="p-faFRxScvpTI4c";quantserve();
+  </script>
+  <noscript>
+   <a href="//www.quantcast.com/p-faFRxScvpTI4c" target="_blank">
+    <img alt="Quantcast" height="1" src="//pixel.quantserve.com/pixel/p-faFRxScvpTI4c.gif" style="display: none; border: 0px;" width="1"/>
+   </a>
+  </noscript>
+  <!-- End Quantcast tag -->
+  <!-- Start Alexa Certify Javascript -->
+  <script src="https://d31qbv1cthcecs.cloudfront.net/atrk.js" type="text/javascript">
+  </script>
+  <script type="text/javascript">
+   _atrk_opts = { atrk_acct: "wV67f1awO400Wn", domain:"socialblade.com"}; atrk ();
+  </script>
+  <noscript>
+   <img alt="" height="1" src="https://d5nxst8fruw4z.cloudfront.net/atrk.gif?account=wV67f1awO400Wn" style="display:none" width="1"/>
+  </noscript>
+  <!-- End Alexa Certify Javascript -->
+  <script async="" src="//cryo.socialblade.com/cb/cb.php?e=ekEwOVNTak5kSm1OV2ZwamFZY0hkbXVxYVhaNkM1ODJud2thdHdMNUNZNGhwYmd5Tnlkcmc1cGQ3ZmRxdTFObUxPenVReS9OQmlnRmlDNWpZVWtwd0lmWXNXcVBBWThpU0pkUTJUR09BLzdIdW1wSkNJbVlVNE1zWnljTUd0aFpuZ1NJMlgvR21vNlJzeUFpTzVMRW5RPT0=&amp;r=">
+  </script>
+  <!-- The Facebook Pixel Code -->
+  <script>
+   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '490438394442284');
+fbq('track', "PageView");
+  </script>
+  <noscript>
+   <img height="1" src="https://www.facebook.com/tr?id=490438394442284&amp;ev=PageView&amp;noscript=1" style="display:none" width="1"/>
+  </noscript>
+  <!-- End Facebook Pixel Code -->
+ </div>
+ <div id="bottomAd">
+  <div style="width: 727px; margin: 0px auto 9px auto;">
+   <div>
+    <div id="cdm-zone-01">
+    </div>
+   </div>
+   <div class="socialblade-heartbeat" style="display: none;">
+    <div style="width: 726px; height: 88px; background: #d37a74; border: 2px solid #b3382c;">
+     <i class="fa fa-exclamation-triangle fa-5x" style="margin: 12px 30px; width: 60px; color: #fff; float: left;">
+     </i>
+     <div style="margin: 0px auto; width: 90%; color:#fff; margin-top: 15px; font-size: 10pt; line-height: 1.5em;">
+      Hello, visitor! Please consider adding SocialBlade.com to your adblock whitelist. Our ads support the development and upkeep of the site. Upgrade to a
+      <a href="/products/subscription" style="color:#fff;">
+       Premium Subscription
+      </a>
+      to load the site without ads.
+     </div>
+    </div>
+    <div style="clear: both;">
+    </div>
+   </div>
+  </div>
+ </div>
+ <div id="footer-bar-wrap">
+  <div>
+   <span class="float-left">
+    Main Mobile App:
+   </span>
+   <a href="https://play.google.com/store/apps/details?id=com.socialblade.droid.statistics" target="_blank">
+    <img src="/images/mobile/google-play-store.png" style="margin-right: 5px;"/>
+   </a>
+   <a href="https://itunes.apple.com/ca/app/social-blade-statistics-app/id838333283?mt=8" target="_blank">
+    <img src="/images/mobile/apple-store.png"/>
+   </a>
+   <span class="float-left" style="margin-left: 40px;">
+    Browser Extensions:
+   </span>
+   <a href="https://chrome.google.com/webstore/detail/social-blade/cfidkbgamfhdgmedldkagjopnbobdmdn" target="_blank">
+    <img src="/images/mobile/chrome-extensions.png"/>
+   </a>
+   <a href="https://addon.socialblade.com/">
+    <img src="/images/mobile/firefox-extensions.png"/>
+   </a>
+   <span class="float-left" style="margin-left: 40px;">
+    Real Time App:
+   </span>
+   <a href="https://play.google.com/store/apps/details?id=com.socialblade.droid.realtime" target="_blank">
+    <img src="/images/mobile/google-play-store.png" style="margin-right: 5px;"/>
+   </a>
+   <a href="https://itunes.apple.com/ca/app/live-sub-count-social-blade/id1208869005?mt=8" target="_blank">
+    <img src="/images/mobile/apple-store.png"/>
+   </a>
+   <a class="core-button core-wide ui-green float-right" href="//support.socialblade.com" target="_blank">
+    Contact Social Blade Support
+   </a>
+   <br/>
+  </div>
+ </div>
+ <div id="footer-main-outer-wrap">
+  <div id="footer-main-inner-wrap">
+   <div id="footer-section-wrap">
+    <div id="footer-section-1">
+     <a class="footer-social-block" href="https://youtube.com/user/socialblade" rel="nofollow" target="_blank">
+      <div style="background: #b31217; margin-right: 10px;">
+       <i class="fa fa-youtube-play">
+       </i>
+      </div>
+     </a>
+     <a class="footer-social-block" href="https://facebook.com/social.blade" rel="nofollow" target="_blank">
+      <div style="background: #3b5998; margin-right: 10px;">
+       <i class="fa fa-facebook">
+       </i>
+      </div>
+     </a>
+     <a class="footer-social-block" href="https://twitter.com/socialblade" rel="nofollow" target="_blank">
+      <div style="background: #55acee; margin-right: 10px;">
+       <i class="fa fa-twitter">
+       </i>
+      </div>
+     </a>
+     <a class="footer-social-block" href="https://instagram.com/socialblade" rel="nofollow" target="_blank">
+      <div style="background: #c08d64; margin-right: 10px;">
+       <i class="fa fa-instagram">
+       </i>
+      </div>
+     </a>
+     <div class="clear-both next-line">
+     </div>
+     <h3 class="footer-header">
+      More Social Blade
+     </h3>
+     <div>
+      <a class="footer-link" href="/blog/" target="_blank">
+       Social Blade Blog
+      </a>
+      <a class="footer-link" href="/tools/" target="_blank">
+       Social Blade Tools
+      </a>
+      <a class="footer-link" href="/business-api/" target="_blank">
+       Social Blade - Business API
+      </a>
+      <a class="footer-link" href="/youtube/education" target="_blank">
+       YouTube EDU
+      </a>
+      <a class="footer-link" href="/grow-and-brand-your-youtube-channel" target="_blank">
+       YouTube Consulting
+      </a>
+      <a class="footer-link" href="/youtube/youtube-money-calculator" target="_blank">
+       YouTube Money Calculator / Estimated Earnings
+      </a>
+      <br/>
+      <a class="footer-link" href="/info/team" target="_blank">
+       Meet the Team
+      </a>
+     </div>
+    </div>
+    <div style="width: 260px; float: left; margin-right: 20px;">
+     <h3 class="footer-header">
+      Integrated Platforms
+     </h3>
+     <div>
+      <a class="footer-link" href="/youtube/">
+       YouTube
+      </a>
+      <a class="footer-link" href="/twitch">
+       Twitch
+      </a>
+      <a class="footer-link" href="/twitter">
+       Twitter
+      </a>
+      <a class="footer-link" href="/instagram">
+       Instagram
+      </a>
+      <a class="footer-link" href="/dailymotion">
+       Dailymotion
+      </a>
+     </div>
+     <h3 class="footer-header" style="margin-top: 16px;">
+      Social Media
+     </h3>
+     <div>
+      <a class="footer-link" href="//youtube.com/socialblade" rel="nofollow" target="_blank">
+       YouTube
+      </a>
+      <a class="footer-link" href="//twitter.com/socialblade" rel="nofollow" target="_blank">
+       Twitter
+      </a>
+      <a class="footer-link" href="//facebook.com/socialblade" rel="nofollow" target="_blank">
+       Facebook
+      </a>
+      <a class="footer-link" href="//twitch.tv/socialbladegaming" rel="nofollow" target="_blank">
+       Twitch
+      </a>
+     </div>
+    </div>
+    <div style="width: 330px; float: left;">
+     <h3 style="font-weight: normal; font-size: 1.1em; margin-bottom: 8px;">
+      Helpful Pages
+     </h3>
+     <div style="font-size: 10pt;">
+      <a class="footer-link" href="//socialblade.com/blog/new-feature-tags-and-locations-3126-2/" target="_blank">
+       Set Tags &amp; Locations for your Profile
+      </a>
+      <a class="footer-link" href="/authenticate" target="_blank">
+       Link and Manage Your Profiles
+      </a>
+      <a class="footer-link" href="//socialblade.com/blog/nine-years-of-socialblade/" target="_blank">
+       Social Blade's History
+      </a>
+      <a class="footer-link" href="/products/query" target="_blank">
+       Find Influencers - Run Reports
+      </a>
+      <a class="footer-link" href="/products/subscription" target="_blank">
+       Remove Ads &amp; Support Social Blade
+      </a>
+     </div>
+    </div>
+   </div>
+   <div style="float: left; width: 300px; height: 250px;">
+    <h3 class="footer-header">
+     We're YouTube Certified!
+    </h3>
+    <div>
+     <a class="footer-link" href="" rel="nofollow" target="_blank">
+      <img alt="Socialblade is YouTube Certified" src="/images/certified.png?version=2" title="Socialblade YouTube Certified"/>
+     </a>
+    </div>
+    <div style="margin-top: 80px; width: 300px; text-align: center; font-size: 8pt; color:#aaa;">
+    </div>
+   </div>
+  </div>
+ </div>
+ <div style="width: 100%; min-width: 1260px; height: 40px;  background: #2d2d2d; font-size: 8pt; text-align: center; line-height: 40px; color:#666;">
+  Social Blade LLC is an independent entity. The public statistical data is sourced from YouTube, but the presentation is not controlled by them. Our use of the name YouTube is for context, not claiming any ownership. It remains the property of the copyright holder.
+ </div>
+ <div id="footer-bottom-bar-wrap">
+  <div id="footer-bottom-bar">
+   <a class="footer-link-2" href="/info/privacy">
+    Privacy Policy
+   </a>
+   <a class="footer-link-2" href="/info/terms">
+    Terms of Service
+   </a>
+   <a class="footer-link-2" href="/info/media">
+    Media Assets
+   </a>
+   <a class="footer-link-2" href="/tools">
+    Tools
+   </a>
+   <a class="footer-link-2" href="/info">
+    About
+   </a>
+   <a class="footer-link-2" href="//support.socialblade.com/" target="_blank">
+    Contact Us
+   </a>
+   <span id="footer-microtime">
+    (0.1093s)
+   </span>
+   <div class="float-right">
+    Copyright ©2008-2021. Social Blade LLC. All Rights Reserved.
+   </div>
+  </div>
+ </div>
+ <div style="width: 100%; height: 100px; background: #2d2d2d;">
+ </div>
+ <script src="/js/jquery-ui.min.js?version=9001.1247647546" type="text/javascript">
+ </script>
+ <script src="/js/search-menu.js?version=9001.1247647546" type="text/javascript">
+ </script>
+ <script src="/js/sb.js?version=9001.1247647546" type="text/javascript">
+ </script>
+ <script src="/js/cookie.js" type="text/javascript">
+ </script>
+ <script src="//code.highcharts.com/highcharts.js">
+ </script>
+ <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js">
+ </script>
+</body>
